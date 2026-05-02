@@ -25,7 +25,7 @@ export default function Navbar() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        background: scrolled ? 'rgba(26,23,20,0.92)' : 'transparent',
+        background: scrolled ? 'rgba(247,241,234,0.88)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid rgba(176,125,98,0.15)' : 'none',
         transition: 'all 0.4s ease',
@@ -33,19 +33,21 @@ export default function Navbar() {
     >
       {/* Logo */}
       <a href="#" style={{ textDecoration: 'none' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-          <span style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: '22px',
-            fontWeight: 600,
-            color: '#b07d62',
-            letterSpacing: '0.08em',
-          }}>DXF</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img
+            src="/dxf-logo-gold.png"
+            alt="DXF Studio logo"
+            style={{
+              display: 'block',
+              height: '34px',
+              width: 'auto',
+            }}
+          />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
             fontWeight: 300,
-            color: '#8a7d74',
+            color: '#7a6b61',
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
           }}>Studio</span>
@@ -65,13 +67,13 @@ export default function Navbar() {
               fontWeight: 400,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#e8e0d8',
+              color: '#5a4f47',
               textDecoration: 'none',
               opacity: 0.7,
               transition: 'opacity 0.2s, color 0.2s',
             }}
             onMouseEnter={e => { e.target.style.opacity = 1; e.target.style.color = '#b07d62' }}
-            onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#e8e0d8' }}
+            onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#5a4f47' }}
           >
             {link}
           </a>
@@ -84,7 +86,7 @@ export default function Navbar() {
             fontWeight: 500,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#1a1714',
+            color: '#fffaf5',
             background: '#b07d62',
             padding: '10px 22px',
             textDecoration: 'none',
@@ -116,7 +118,7 @@ export default function Navbar() {
             display: 'block',
             width: '24px',
             height: '1px',
-            background: '#e8e0d8',
+            background: '#5a4f47',
             transition: 'all 0.3s',
             transform: menuOpen
               ? i === 0 ? 'rotate(45deg) translate(4px, 4px)'
@@ -133,7 +135,7 @@ export default function Navbar() {
           position: 'fixed',
           inset: 0,
           top: '64px',
-          background: 'rgba(26,23,20,0.98)',
+          background: 'rgba(247,241,234,0.97)',
           backdropFilter: 'blur(12px)',
           display: 'flex',
           flexDirection: 'column',
@@ -151,7 +153,7 @@ export default function Navbar() {
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '36px',
                 fontWeight: 300,
-                color: '#e8e0d8',
+                color: '#5a4f47',
                 textDecoration: 'none',
                 letterSpacing: '0.05em',
               }}

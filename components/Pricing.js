@@ -96,7 +96,7 @@ export default function Pricing() {
           fontFamily: 'Cormorant Garamond, serif',
           fontSize: 'clamp(36px, 5vw, 60px)',
           fontWeight: 300,
-          color: '#f5f0eb',
+          color: '#2d2926',
           lineHeight: 1.1,
           maxWidth: '500px',
         }}>
@@ -109,14 +109,14 @@ export default function Pricing() {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: '2px',
-        background: 'rgba(176,125,98,0.08)',
+        background: 'rgba(176,125,98,0.10)',
       }}>
         {plans.map((plan) => (
           <div
             key={plan.name}
             className="price-card"
             style={{
-              background: plan.highlight ? '#221a15' : '#1a1714',
+              background: plan.highlight ? '#f3e8dd' : '#fffaf5',
               padding: '48px 36px',
               opacity: 0,
               transform: 'translateY(24px)',
@@ -143,7 +143,7 @@ export default function Pricing() {
               fontWeight: 500,
               letterSpacing: '0.25em',
               textTransform: 'uppercase',
-              color: plan.highlight ? '#b07d62' : '#8a7d74',
+              color: plan.highlight ? '#b07d62' : '#7a6b61',
               marginBottom: '20px',
             }}>
               {plan.name}
@@ -154,14 +154,14 @@ export default function Pricing() {
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '52px',
                 fontWeight: 400,
-                color: '#f5f0eb',
+                color: '#2d2926',
                 lineHeight: 1,
               }}>{plan.price}</span>
             </div>
             <div style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '12px',
-              color: '#8a7d74',
+              color: '#7a6b61',
               letterSpacing: '0.1em',
               marginBottom: '24px',
             }}>{plan.sub}</div>
@@ -172,7 +172,7 @@ export default function Pricing() {
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '14px',
               fontWeight: 300,
-              color: '#8a7d74',
+              color: '#7a6b61',
               lineHeight: 1.8,
               marginBottom: '28px',
             }}>{plan.description}</p>
@@ -185,7 +185,7 @@ export default function Pricing() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '13px',
                     fontWeight: 300,
-                    color: '#e8e0d8',
+                    color: '#5a4f47',
                     opacity: 0.75,
                   }}>{f}</span>
                 </li>
@@ -205,7 +205,7 @@ export default function Pricing() {
                 textAlign: 'center',
                 display: 'block',
                 background: plan.highlight ? '#b07d62' : 'transparent',
-                color: plan.highlight ? '#1a1714' : '#b07d62',
+                color: plan.highlight ? '#fffaf5' : '#b07d62',
                 border: plan.highlight ? 'none' : '1px solid rgba(176,125,98,0.4)',
                 transition: 'all 0.2s',
               }}
@@ -226,7 +226,7 @@ export default function Pricing() {
         fontFamily: 'DM Sans, sans-serif',
         fontSize: '13px',
         fontWeight: 300,
-        color: '#8a7d74',
+        color: '#7a6b61',
         textAlign: 'center',
         marginTop: '32px',
       }}>

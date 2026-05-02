@@ -96,7 +96,7 @@ export default function Services() {
           fontSize: 'clamp(38px, 5vw, 64px)',
           fontWeight: 300,
           lineHeight: 1.1,
-          color: '#f5f0eb',
+          color: '#2d2926',
           maxWidth: '600px',
         }}>
           Everything a small business needs to{' '}
@@ -109,7 +109,7 @@ export default function Services() {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: '2px',
-        background: 'rgba(176,125,98,0.08)',
+        background: 'rgba(176,125,98,0.10)',
         marginBottom: '2px',
       }}>
         {services.filter(s => !s.premium).map((service) => (
@@ -117,7 +117,7 @@ export default function Services() {
             key={service.number}
             className="service-card"
             style={{
-              background: service.badge === 'Most Popular' ? '#221a15' : '#1a1714',
+              background: service.badge === 'Most Popular' ? '#f3e8dd' : '#fffaf5',
               padding: '48px 36px',
               opacity: 0,
               transform: 'translateY(24px)',
@@ -125,8 +125,8 @@ export default function Services() {
               cursor: 'default',
               position: 'relative',
             }}
-            onMouseEnter={e => e.currentTarget.style.background = '#221e1a'}
-            onMouseLeave={e => e.currentTarget.style.background = service.badge === 'Most Popular' ? '#221a15' : '#1a1714'}
+            onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
+            onMouseLeave={e => e.currentTarget.style.background = service.badge === 'Most Popular' ? '#f3e8dd' : '#fffaf5'}
           >
             {service.badge === 'Most Popular' && (
               <div style={{
@@ -149,12 +149,12 @@ export default function Services() {
             }}>{service.number}</div>
             <h3 style={{
               fontFamily: 'Cormorant Garamond, serif', fontSize: '26px',
-              fontWeight: 400, color: '#f5f0eb', lineHeight: 1.2, marginBottom: '20px',
+              fontWeight: 400, color: '#2d2926', lineHeight: 1.2, marginBottom: '20px',
             }}>{service.title}</h3>
             <div style={{ width: '30px', height: '1px', background: '#b07d62', marginBottom: '20px' }} />
             <p style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '14px', fontWeight: 300,
-              color: '#8a7d74', lineHeight: 1.8, marginBottom: '28px',
+              color: '#7a6b61', lineHeight: 1.8, marginBottom: '28px',
             }}>{service.description}</p>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {service.features.map(f => (
@@ -162,7 +162,7 @@ export default function Services() {
                   <span style={{ color: '#b07d62', fontSize: '12px', marginTop: '2px', flexShrink: 0 }}>—</span>
                   <span style={{
                     fontFamily: 'DM Sans, sans-serif', fontSize: '13px',
-                    fontWeight: 300, color: '#e8e0d8', opacity: 0.7,
+                    fontWeight: 300, color: '#5a4f47', opacity: 0.7,
                   }}>{f}</span>
                 </li>
               ))}
@@ -177,7 +177,7 @@ export default function Services() {
           key={service.number}
           className="service-card"
           style={{
-            background: '#1a1714',
+            background: '#fffaf5',
             padding: '52px 48px',
             opacity: 0,
             transform: 'translateY(24px)',
@@ -190,8 +190,8 @@ export default function Services() {
             gap: '48px',
             alignItems: 'center',
           }}
-          onMouseEnter={e => e.currentTarget.style.background = '#221e1a'}
-          onMouseLeave={e => e.currentTarget.style.background = '#1a1714'}
+          onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
+          onMouseLeave={e => e.currentTarget.style.background = '#fffaf5'}
         >
           {/* Left */}
           <div>
@@ -209,12 +209,12 @@ export default function Services() {
             </div>
             <h3 style={{
               fontFamily: 'Cormorant Garamond, serif', fontSize: '32px',
-              fontWeight: 400, color: '#f5f0eb', lineHeight: 1.2, marginBottom: '20px',
+              fontWeight: 400, color: '#2d2926', lineHeight: 1.2, marginBottom: '20px',
             }}>{service.title}</h3>
             <div style={{ width: '30px', height: '1px', background: '#b07d62', marginBottom: '20px' }} />
             <p style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '15px', fontWeight: 300,
-              color: '#8a7d74', lineHeight: 1.9,
+              color: '#7a6b61', lineHeight: 1.9,
             }}>{service.description}</p>
           </div>
 
@@ -222,7 +222,7 @@ export default function Services() {
           <div>
             <div style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '11px', letterSpacing: '0.2em',
-              textTransform: 'uppercase', color: '#8a7d74', marginBottom: '20px',
+              textTransform: 'uppercase', color: '#7a6b61', marginBottom: '20px',
             }}>What's included</div>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '36px' }}>
               {service.features.map(f => (
@@ -230,7 +230,7 @@ export default function Services() {
                   <span style={{ color: '#b07d62', flexShrink: 0, marginTop: '1px' }}>✓</span>
                   <span style={{
                     fontFamily: 'DM Sans, sans-serif', fontSize: '14px',
-                    fontWeight: 300, color: '#e8e0d8', opacity: 0.8,
+                    fontWeight: 300, color: '#5a4f47', opacity: 0.8,
                   }}>{f}</span>
                 </li>
               ))}

@@ -77,7 +77,7 @@ export default function Difference() {
       ref={ref}
       style={{
         padding: '120px 40px',
-        background: '#141210',
+        background: '#f7f1ea',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -85,13 +85,13 @@ export default function Difference() {
       <div style={{
         position: 'absolute', left: '-10%', top: '10%',
         width: '600px', height: '600px',
-        background: 'radial-gradient(circle, rgba(176,125,98,0.04) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(176,125,98,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
       <div style={{
         position: 'absolute', right: '-5%', bottom: '10%',
         width: '400px', height: '400px',
-        background: 'radial-gradient(circle, rgba(176,125,98,0.04) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(176,125,98,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -109,20 +109,20 @@ export default function Difference() {
           <h2 style={{
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(38px, 5vw, 64px)',
-            fontWeight: 300, lineHeight: 1.1, color: '#f5f0eb', marginBottom: '24px',
+            fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '24px',
           }}>
             Wix is a <em style={{ color: '#b07d62' }}>$25/month tool.</em><br />
             We deliver a business asset.
           </h2>
           <p style={{
             fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 300,
-            color: '#8a7d74', lineHeight: 1.9, marginBottom: '12px',
+            color: '#7a6b61', lineHeight: 1.9, marginBottom: '12px',
           }}>
             If a better website brings you just one or two extra clients a year, it has already paid for itself many times over. Wix is an expense. DXF Studio is an investment.
           </p>
           <p style={{
             fontFamily: 'DM Sans, sans-serif', fontSize: '16px',
-            fontWeight: 300, color: '#8a7d74', lineHeight: 1.9,
+            fontWeight: 300, color: '#7a6b61', lineHeight: 1.9,
           }}>
             Here is exactly why.
           </p>
@@ -133,7 +133,7 @@ export default function Difference() {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
           gap: '2px',
-          background: 'rgba(176,125,98,0.08)',
+          background: 'rgba(176,125,98,0.10)',
           marginBottom: '80px',
         }}>
           {advantages.map((adv) => (
@@ -141,7 +141,7 @@ export default function Difference() {
               key={adv.number}
               className="adv-card"
               style={{
-                background: '#1a1714',
+                background: '#fffaf5',
                 padding: '44px 36px',
                 opacity: 0,
                 transform: 'translateY(20px)',
@@ -150,11 +150,11 @@ export default function Difference() {
                 cursor: 'default',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = '#221e1a'
+                e.currentTarget.style.background = '#f6ece2'
                 e.currentTarget.style.borderTopColor = '#b07d62'
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = '#1a1714'
+                e.currentTarget.style.background = '#fffaf5'
                 e.currentTarget.style.borderTopColor = 'transparent'
               }}
             >
@@ -176,18 +176,18 @@ export default function Difference() {
                 }}>{adv.number}</span>
                 <h3 style={{
                   fontFamily: 'Cormorant Garamond, serif', fontSize: '23px',
-                  fontWeight: 400, color: '#f5f0eb', lineHeight: 1.25,
+                  fontWeight: 400, color: '#2d2926', lineHeight: 1.25,
                 }}>{adv.title}</h3>
               </div>
 
               <p style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '14px', fontWeight: 400,
-                color: '#e8e0d8', lineHeight: 1.8, marginBottom: '16px', opacity: 0.85,
+                color: '#5a4f47', lineHeight: 1.8, marginBottom: '16px', opacity: 0.85,
               }}>{adv.pitch}</p>
 
               <p style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 300,
-                color: '#8a7d74', lineHeight: 1.8,
+                color: '#7a6b61', lineHeight: 1.8,
                 paddingTop: '16px', borderTop: '1px solid rgba(176,125,98,0.1)',
               }}>{adv.detail}</p>
             </div>
@@ -196,7 +196,7 @@ export default function Difference() {
 
         {/* Price objection callout */}
         <div style={{
-          background: '#1a1714',
+          background: '#fffaf5',
           border: '1px solid rgba(176,125,98,0.15)',
           padding: '56px 48px',
           position: 'relative',
@@ -221,7 +221,7 @@ export default function Difference() {
               <h3 style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: 'clamp(28px, 3.5vw, 44px)',
-                fontWeight: 300, color: '#f5f0eb', lineHeight: 1.2,
+                fontWeight: 300, color: '#2d2926', lineHeight: 1.2,
               }}>
                 "But Wix is only<br />
                 <em style={{ color: '#b07d62' }}>$25 a month."</em>
@@ -230,13 +230,13 @@ export default function Difference() {
             <div>
               <p style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '15px',
-                fontWeight: 300, color: '#8a7d74', lineHeight: 1.9, marginBottom: '20px',
+                fontWeight: 300, color: '#7a6b61', lineHeight: 1.9, marginBottom: '20px',
               }}>
                 Wix is a $25/month tool. You still have to build it, photograph it, and maintain it yourself — or hire someone to. Add their time, the stock photo limitations, slower load speed, and the SEO gap, and that "$25 site" costs far more in lost business than it saves.
               </p>
               <p style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '15px',
-                fontWeight: 300, color: '#e8e0d8', lineHeight: 1.9, fontStyle: 'italic',
+                fontWeight: 300, color: '#5a4f47', lineHeight: 1.9, fontStyle: 'italic',
               }}>
                 If our faster site, better photography, and stronger SEO bring you just one extra client a month — it has paid for itself many times over.
               </p>

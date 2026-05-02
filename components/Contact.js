@@ -39,14 +39,14 @@ export default function Contact() {
 
   const inputStyle = {
     width: '100%',
-    background: 'rgba(255,255,255,0.03)',
-    border: '1px solid rgba(232,224,216,0.1)',
+    background: 'rgba(176,125,98,0.10)',
+    border: '1px solid rgba(90,79,71,0.14)',
     borderRadius: 0,
     padding: '14px 16px',
     fontFamily: 'DM Sans, sans-serif',
     fontSize: '14px',
     fontWeight: 300,
-    color: '#f5f0eb',
+    color: '#2d2926',
     outline: 'none',
     transition: 'border-color 0.2s',
     boxSizing: 'border-box',
@@ -58,7 +58,7 @@ export default function Contact() {
       ref={ref}
       style={{
         padding: '120px 40px',
-        background: '#141210',
+        background: '#f7f1ea',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -101,7 +101,7 @@ export default function Contact() {
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(36px, 4.5vw, 56px)',
               fontWeight: 300,
-              color: '#f5f0eb',
+              color: '#2d2926',
               lineHeight: 1.1,
               marginBottom: '32px',
             }}>
@@ -114,7 +114,7 @@ export default function Contact() {
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '15px',
               fontWeight: 300,
-              color: '#8a7d74',
+              color: '#7a6b61',
               lineHeight: 1.9,
               marginBottom: '48px',
             }}>
@@ -143,7 +143,7 @@ export default function Contact() {
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '14px',
                     fontWeight: 300,
-                    color: '#e8e0d8',
+                    color: '#5a4f47',
                   }}>{item.value}</span>
                 </div>
               ))}
@@ -157,7 +157,7 @@ export default function Contact() {
             {status === 'sent' ? (
               <div style={{
                 padding: '60px 40px',
-                background: '#1a1714',
+                background: '#fffaf5',
                 textAlign: 'center',
                 border: '1px solid rgba(176,125,98,0.2)',
               }}>
@@ -171,14 +171,14 @@ export default function Contact() {
                   fontFamily: 'Cormorant Garamond, serif',
                   fontSize: '28px',
                   fontWeight: 300,
-                  color: '#f5f0eb',
+                  color: '#2d2926',
                   marginBottom: '12px',
                 }}>Message received.</h3>
                 <p style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '14px',
                   fontWeight: 300,
-                  color: '#8a7d74',
+                  color: '#7a6b61',
                 }}>We'll be in touch within 24 hours.</p>
               </div>
             ) : (
@@ -195,7 +195,7 @@ export default function Contact() {
                       fontSize: '11px',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
-                      color: '#8a7d74',
+                      color: '#7a6b61',
                       marginBottom: '8px',
                     }}>{field.label}</label>
                     <input
@@ -205,7 +205,7 @@ export default function Contact() {
                       onChange={e => setForm(f => ({ ...f, [field.key]: e.target.value }))}
                       style={inputStyle}
                       onFocus={e => e.target.style.borderColor = 'rgba(176,125,98,0.5)'}
-                      onBlur={e => e.target.style.borderColor = 'rgba(232,224,216,0.1)'}
+                      onBlur={e => e.target.style.borderColor = 'rgba(90,79,71,0.14)'}
                     />
                   </div>
                 ))}
@@ -216,7 +216,7 @@ export default function Contact() {
                     fontSize: '11px',
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#8a7d74',
+                    color: '#7a6b61',
                     marginBottom: '8px',
                   }}>Tell us about your project</label>
                   <textarea
@@ -226,7 +226,7 @@ export default function Contact() {
                     onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                     style={{ ...inputStyle, resize: 'vertical', minHeight: '120px' }}
                     onFocus={e => e.target.style.borderColor = 'rgba(176,125,98,0.5)'}
-                    onBlur={e => e.target.style.borderColor = 'rgba(232,224,216,0.1)'}
+                    onBlur={e => e.target.style.borderColor = 'rgba(90,79,71,0.14)'}
                   />
                 </div>
                 <button
@@ -238,7 +238,7 @@ export default function Contact() {
                     fontWeight: 500,
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#1a1714',
+                    color: '#fffaf5',
                     background: '#b07d62',
                     border: 'none',
                     padding: '18px',

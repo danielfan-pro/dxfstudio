@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer style={{
       padding: '48px 40px',
-      background: '#0f0d0b',
+      background: '#efe4d8',
       borderTop: '1px solid rgba(176,125,98,0.1)',
     }}>
       <div style={{
@@ -26,7 +26,7 @@ export default function Footer() {
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '10px',
             fontWeight: 300,
-            color: '#8a7d74',
+            color: '#7a6b61',
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
           }}>Studio</span>
@@ -42,12 +42,12 @@ export default function Footer() {
                 fontSize: '11px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#8a7d74',
+                color: '#7a6b61',
                 textDecoration: 'none',
                 transition: 'color 0.2s',
               }}
               onMouseEnter={e => e.target.style.color = '#b07d62'}
-              onMouseLeave={e => e.target.style.color = '#8a7d74'}
+              onMouseLeave={e => e.target.style.color = '#7a6b61'}
             >
               {link}
             </a>
@@ -58,7 +58,7 @@ export default function Footer() {
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '11px',
           fontWeight: 300,
-          color: '#8a7d74',
+          color: '#7a6b61',
           letterSpacing: '0.05em',
         }}>
           © {new Date().getFullYear()} DXF Studio · Boston, MA

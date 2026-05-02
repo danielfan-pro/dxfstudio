@@ -33,7 +33,7 @@ export default function Hero() {
         right: '-5%',
         width: '55vw',
         height: '80vh',
-        border: '1px solid rgba(176,125,98,0.08)',
+        border: '1px solid rgba(176,125,98,0.10)',
         transform: 'rotate(8deg)',
         pointerEvents: 'none',
       }} />
@@ -43,7 +43,7 @@ export default function Hero() {
         right: '2%',
         width: '45vw',
         height: '65vh',
-        border: '1px solid rgba(176,125,98,0.06)',
+        border: '1px solid rgba(176,125,98,0.08)',
         transform: 'rotate(4deg)',
         pointerEvents: 'none',
       }} />
@@ -55,7 +55,7 @@ export default function Hero() {
         right: '15%',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(176,125,98,0.07) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(176,125,98,0.09) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -89,7 +89,7 @@ export default function Hero() {
             fontWeight: 300,
             lineHeight: 0.95,
             letterSpacing: '-0.02em',
-            color: '#f5f0eb',
+            color: '#2d2926',
             marginBottom: '8px',
           }}
         >
@@ -103,7 +103,7 @@ export default function Hero() {
             fontWeight: 300,
             lineHeight: 0.95,
             letterSpacing: '-0.02em',
-            color: '#f5f0eb',
+            color: '#2d2926',
             marginBottom: '8px',
             fontStyle: 'italic',
           }}
@@ -132,7 +132,7 @@ export default function Hero() {
             fontFamily: 'DM Sans, sans-serif',
             fontSize: 'clamp(15px, 1.8vw, 18px)',
             fontWeight: 300,
-            color: '#8a7d74',
+            color: '#7a6b61',
             maxWidth: '520px',
             lineHeight: 1.8,
             marginBottom: '52px',
@@ -151,7 +151,7 @@ export default function Hero() {
               fontWeight: 500,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#1a1714',
+              color: '#fffaf5',
               background: '#b07d62',
               padding: '16px 36px',
               textDecoration: 'none',
@@ -171,15 +171,15 @@ export default function Hero() {
               fontWeight: 400,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#e8e0d8',
-              border: '1px solid rgba(232,224,216,0.2)',
+              color: '#5a4f47',
+              border: '1px solid rgba(45,41,38,0.16)',
               padding: '16px 36px',
               textDecoration: 'none',
               display: 'inline-block',
               transition: 'border-color 0.2s, color 0.2s',
             }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = '#b07d62'; e.currentTarget.style.color = '#b07d62' }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(232,224,216,0.2)'; e.currentTarget.style.color = '#e8e0d8' }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(45,41,38,0.16)'; e.currentTarget.style.color = '#5a4f47' }}
           >
             See Our Work
           </a>
@@ -193,7 +193,7 @@ export default function Hero() {
             gap: '48px',
             marginTop: '80px',
             paddingTop: '40px',
-            borderTop: '1px solid rgba(176,125,98,0.12)',
+            borderTop: '1px solid rgba(176,125,98,0.16)',
             flexWrap: 'wrap',
           }}
         >
@@ -217,7 +217,7 @@ export default function Hero() {
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',
                 fontWeight: 300,
-                color: '#8a7d74',
+                color: '#7a6b61',
                 letterSpacing: '0.05em',
                 lineHeight: 1.6,
                 whiteSpace: 'pre-line',
@@ -246,7 +246,7 @@ export default function Hero() {
           fontSize: '10px',
           letterSpacing: '0.25em',
           textTransform: 'uppercase',
-          color: '#8a7d74',
+          color: '#7a6b61',
         }}>Scroll</span>
         <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, #b07d62, transparent)' }} />
       </div>
