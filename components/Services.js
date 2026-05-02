@@ -105,13 +105,16 @@ export default function Services() {
       </div>
 
       {/* Services grid — first 4 in 2x2, iOS full width below */}
-      <div style={{
+      <div
+        className="services-grid"
+        style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
         gap: '2px',
         background: 'rgba(176,125,98,0.10)',
         marginBottom: '2px',
-      }}>
+      }}
+      >
         {services.filter(s => !s.premium).map((service) => (
           <div
             key={service.number}
@@ -251,6 +254,14 @@ export default function Services() {
           </div>
         </div>
       ))}
+
+      <style>{`
+        @media (max-width: 767px) {
+          #services .services-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
