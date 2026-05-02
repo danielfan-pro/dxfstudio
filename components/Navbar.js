@@ -32,19 +32,20 @@ export default function Navbar() {
       }}
     >
       {/* Logo */}
-      <a href="#" style={{ textDecoration: 'none' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <a href="#" style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+        <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <img
             src="/dxf-logo-gold.png"
             alt="DXF Studio logo"
+            className="brand-logo"
             style={{
               display: 'block',
               height: '34px',
               width: 'auto',
             }}
           />
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span style={{
+          <div className="brand-copy" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span className="brand-studio" style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '11px',
               fontWeight: 300,
@@ -60,8 +61,8 @@ export default function Navbar() {
                 gap: '12px',
               }}
             >
-              <div style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
-              <span style={{
+              <div className="brand-divider" style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
+              <span className="brand-descriptor-text" style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '15px',
                 fontStyle: 'italic',
@@ -194,9 +195,26 @@ export default function Navbar() {
           .brand-descriptor { display: flex !important; }
         }
         @media (max-width: 767px) {
+          nav {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
-          .brand-descriptor { display: none !important; }
+          .brand-lockup { gap: 8px !important; }
+          .brand-logo { height: 26px !important; }
+          .brand-copy { gap: 8px !important; }
+          .brand-studio {
+            font-size: 9px !important;
+            letter-spacing: 0.22em !important;
+          }
+          .brand-descriptor { display: flex !important; gap: 8px !important; }
+          .brand-divider { height: 18px !important; }
+          .brand-descriptor-text {
+            font-size: 10px !important;
+            letter-spacing: 0.06em !important;
+            white-space: nowrap !important;
+          }
         }
       `}</style>
     </nav>

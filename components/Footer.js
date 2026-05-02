@@ -5,7 +5,9 @@ export default function Footer() {
       background: '#faf7f2',
       borderTop: '1px solid rgba(176,125,98,0.1)',
     }}>
-      <div style={{
+      <div
+        className="footer-inner"
+        style={{
         maxWidth: '1200px',
         margin: '0 auto',
         display: 'flex',
@@ -13,18 +15,20 @@ export default function Footer() {
         alignItems: 'center',
         flexWrap: 'wrap',
         gap: '24px',
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+      }}
+      >
+        <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img
             src="/dxf-logo-gold.png"
             alt="DXF Studio logo"
+            className="footer-logo"
             style={{
               display: 'block',
               height: '30px',
               width: 'auto',
             }}
           />
-          <span style={{
+          <span className="footer-studio" style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '10px',
             fontWeight: 300,
@@ -34,7 +38,7 @@ export default function Footer() {
           }}>Studio</span>
         </div>
 
-        <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
+        <div className="footer-links" style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
           {['Services', 'Work', 'About', 'Contact'].map(link => (
             <a
               key={link}
@@ -56,7 +60,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div style={{
+        <div className="footer-copy" style={{
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '11px',
           fontWeight: 300,
@@ -66,6 +70,29 @@ export default function Footer() {
           © {new Date().getFullYear()} DXF Studio · Boston, MA
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .footer-inner {
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
+            gap: 20px !important;
+          }
+          .footer-brand {
+            justify-content: center !important;
+          }
+          .footer-links {
+            justify-content: center !important;
+            gap: 24px !important;
+          }
+          .footer-copy {
+            text-align: center !important;
+            width: 100% !important;
+          }
+        }
+      `}</style>
     </footer>
   )
 }
