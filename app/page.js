@@ -14,13 +14,9 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(176,125,98,0.2), transparent)' }} />
         <Services />
-        <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(176,125,98,0.2), transparent)' }} />
         <Difference />
-        <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(176,125,98,0.2), transparent)' }} />
         <Pricing />
-        <div style={{ height: '1px', background: 'linear-gradient(to right, transparent, rgba(176,125,98,0.2), transparent)' }} />
         <Contact />
       </main>
       <Footer />

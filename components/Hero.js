@@ -26,28 +26,6 @@ export default function Hero() {
         padding: '120px 40px 80px',
       }}
     >
-      {/* Background geometric elements */}
-      <div style={{
-        position: 'absolute',
-        top: '10%',
-        right: '-5%',
-        width: '55vw',
-        height: '80vh',
-        border: '1px solid rgba(176,125,98,0.10)',
-        transform: 'rotate(8deg)',
-        pointerEvents: 'none',
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: '15%',
-        right: '2%',
-        width: '45vw',
-        height: '65vh',
-        border: '1px solid rgba(176,125,98,0.08)',
-        transform: 'rotate(4deg)',
-        pointerEvents: 'none',
-      }} />
-
       {/* Copper glow */}
       <div style={{
         position: 'absolute',
@@ -55,7 +33,7 @@ export default function Hero() {
         right: '15%',
         width: '400px',
         height: '400px',
-        background: 'radial-gradient(circle, rgba(176,125,98,0.09) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(176,125,98,0.05) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -193,7 +171,6 @@ export default function Hero() {
             gap: '48px',
             marginTop: '80px',
             paddingTop: '40px',
-            borderTop: '1px solid rgba(176,125,98,0.16)',
             flexWrap: 'wrap',
           }}
         >
@@ -229,27 +206,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div style={{
-        position: 'absolute',
-        bottom: '40px',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '8px',
-        animation: 'float 2.5s ease-in-out infinite',
-      }}>
-        <span style={{
-          fontFamily: 'DM Sans, sans-serif',
-          fontSize: '10px',
-          letterSpacing: '0.25em',
-          textTransform: 'uppercase',
-          color: '#7a6b61',
-        }}>Scroll</span>
-        <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, #b07d62, transparent)' }} />
-      </div>
     </section>
   )
 }
