@@ -63,44 +63,44 @@ export default function Hero() {
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(52px, 9vw, 120px)',
+            fontSize: 'clamp(48px, 8.5vw, 108px)',
             fontWeight: 300,
-            lineHeight: 0.95,
+            lineHeight: 0.98,
             letterSpacing: '-0.02em',
             color: '#2d2926',
             marginBottom: '8px',
           }}
         >
-          Your Business
+          If People Can't
         </h1>
         <h1
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(52px, 9vw, 120px)',
+            fontSize: 'clamp(48px, 8.5vw, 108px)',
             fontWeight: 300,
-            lineHeight: 0.95,
+            lineHeight: 0.98,
             letterSpacing: '-0.02em',
             color: '#2d2926',
             marginBottom: '8px',
             fontStyle: 'italic',
           }}
         >
-          Deserves More
+          Find You
         </h1>
         <h1
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(52px, 9vw, 120px)',
+            fontSize: 'clamp(48px, 8.5vw, 108px)',
             fontWeight: 300,
-            lineHeight: 0.95,
+            lineHeight: 0.98,
             letterSpacing: '-0.02em',
             color: '#b07d62',
             marginBottom: '48px',
           }}
         >
-          Than Social Media.
+          They Move On.
         </h1>
 
         {/* Subtext */}
@@ -113,11 +113,50 @@ export default function Hero() {
             color: '#7a6b61',
             maxWidth: '520px',
             lineHeight: 1.8,
-            marginBottom: '52px',
+            marginBottom: '32px',
           }}
         >
-          Most customers Google you before they call. If they can't find you — or don't trust what they see — they move on. We fix that.
+          We design websites and brand photography for small businesses that need to look credible online, show up clearly on mobile, and turn searchers into real leads.
         </p>
+
+        <div
+          className="reveal"
+          style={{
+            display: 'flex',
+            gap: '28px',
+            flexWrap: 'wrap',
+            marginBottom: '40px',
+          }}
+        >
+          {[
+            { title: '75%', label: 'judge credibility by design' },
+            { title: 'Mobile-first', label: 'because most traffic is on phones' },
+            { title: 'Real photos', label: 'so your business looks trustworthy' },
+          ].map((item) => (
+            <div key={item.title} style={{ minWidth: '180px' }}>
+              <div style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                fontSize: '28px',
+                fontWeight: 500,
+                color: '#b07d62',
+                lineHeight: 1,
+                marginBottom: '6px',
+              }}>
+                {item.title}
+              </div>
+              <div style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '12px',
+                fontWeight: 300,
+                color: '#7a6b61',
+                letterSpacing: '0.03em',
+                lineHeight: 1.6,
+              }}>
+                {item.label}
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* CTAs */}
         <div className="reveal" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
@@ -161,48 +200,6 @@ export default function Hero() {
           >
             See Our Work
           </a>
-        </div>
-
-        {/* Stats row */}
-        <div
-          className="reveal"
-          style={{
-            display: 'flex',
-            gap: '48px',
-            marginTop: '80px',
-            paddingTop: '40px',
-            flexWrap: 'wrap',
-          }}
-        >
-          {[
-            { num: '1 in 4', label: 'Small businesses\nhave no website' },
-            { num: '75%', label: 'Of consumers judge\ncredibility by design' },
-            { num: '58%', label: 'Of all web traffic\nis mobile' },
-          ].map(stat => (
-            <div key={stat.num}>
-              <div style={{
-                fontFamily: 'Cormorant Garamond, serif',
-                fontSize: '36px',
-                fontWeight: 500,
-                color: '#b07d62',
-                lineHeight: 1,
-                marginBottom: '8px',
-              }}>
-                {stat.num}
-              </div>
-              <div style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '11px',
-                fontWeight: 300,
-                color: '#7a6b61',
-                letterSpacing: '0.05em',
-                lineHeight: 1.6,
-                whiteSpace: 'pre-line',
-              }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
