@@ -5,15 +5,15 @@ const services = [
   {
     number: '01',
     title: 'Web Design & Development',
-    description: 'Custom-built websites on Next.js — fast, mobile-optimized, and built to rank on Google. Not a template. Not a drag-and-drop builder. A real website that works.',
-    features: ['Mobile-first responsive design', 'Core Web Vitals optimized', 'SEO-ready structure', 'CMS so you update your own content'],
+    description: "Custom-built on Next.js — lightning-fast, mobile-first, and architected to rank on Google. We don't use templates or drag-and-drop builders. We write clean code to ensure your site is a true business asset.",
+    features: ['Mobile-first responsive design', 'Core Web Vitals optimized', 'Search engine optimization (SEO)-ready structure', 'Content management system (CMS) so you can update your own content'],
     badge: null,
     premium: false,
   },
   {
     number: '02',
     title: 'Brand Photography',
-    description: 'Professional photos of your business, team, products, and space. Stock photos signal generic. Real photos signal credible. We shoot both on the same day.',
+    description: 'Authentic brand photography of your team, workspace, and products. While stock photos feel generic, real visual storytelling builds immediate trust. We coordinate your photo shoot and digital build seamlessly.',
     features: ['Business & team headshots', 'Product & space photography', 'Same-day shoot + web build', 'Edited gallery delivered in 2 weeks'],
     badge: null,
     premium: false,

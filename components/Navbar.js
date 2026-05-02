@@ -63,7 +63,7 @@ export default function Navbar() {
               <div style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
               <span style={{
                 fontFamily: 'Cormorant Garamond, serif',
-                fontSize: '18px',
+                fontSize: '15px',
                 fontStyle: 'italic',
                 fontWeight: 300,
                 color: '#9d8678',

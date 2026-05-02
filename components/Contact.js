@@ -127,7 +127,7 @@ export default function Contact() {
             }}>
               {[
                 { label: 'Email', value: 'hello@dxfstudio.com' },
-                { label: 'Based in', value: 'Boston / Melrose, MA' },
+                { label: 'Based in', value: 'Melrose, MA' },
                 { label: 'Response time', value: 'Within 24 hours' },
               ].map(item => (
                 <div key={item.label} style={{ display: 'flex', gap: '16px', alignItems: 'baseline' }}>
