@@ -58,7 +58,7 @@ export default function Contact() {
       ref={ref}
       style={{
         padding: '120px 40px',
-        background: '#f7f1ea',
+        background: '#faf7f2',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -157,7 +157,7 @@ export default function Contact() {
             {status === 'sent' ? (
               <div style={{
                 padding: '60px 40px',
-                background: '#fffaf5',
+                background: '#fcfbf8',
                 textAlign: 'center',
                 border: '1px solid rgba(176,125,98,0.2)',
               }}>

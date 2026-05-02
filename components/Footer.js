@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer style={{
       padding: '48px 40px',
-      background: '#efe4d8',
+      background: '#faf7f2',
       borderTop: '1px solid rgba(176,125,98,0.1)',
     }}>
       <div style={{
@@ -14,14 +14,16 @@ export default function Footer() {
         flexWrap: 'wrap',
         gap: '24px',
       }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-          <span style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: '20px',
-            fontWeight: 600,
-            color: '#b07d62',
-            letterSpacing: '0.08em',
-          }}>DXF</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img
+            src="/dxf-logo-gold.png"
+            alt="DXF Studio logo"
+            style={{
+              display: 'block',
+              height: '30px',
+              width: 'auto',
+            }}
+          />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '10px',

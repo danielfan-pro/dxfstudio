@@ -116,7 +116,7 @@ export default function Pricing() {
             key={plan.name}
             className="price-card"
             style={{
-              background: plan.highlight ? '#f3e8dd' : '#fffaf5',
+              background: plan.highlight ? '#f7efe6' : '#fcfbf8',
               padding: '48px 36px',
               opacity: 0,
               transform: 'translateY(24px)',

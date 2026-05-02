@@ -117,7 +117,7 @@ export default function Services() {
             key={service.number}
             className="service-card"
             style={{
-              background: service.badge === 'Most Popular' ? '#f3e8dd' : '#fffaf5',
+              background: service.badge === 'Most Popular' ? '#f7efe6' : '#fcfbf8',
               padding: '48px 36px',
               opacity: 0,
               transform: 'translateY(24px)',
@@ -126,7 +126,7 @@ export default function Services() {
               position: 'relative',
             }}
             onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
-            onMouseLeave={e => e.currentTarget.style.background = service.badge === 'Most Popular' ? '#f3e8dd' : '#fffaf5'}
+            onMouseLeave={e => e.currentTarget.style.background = service.badge === 'Most Popular' ? '#f7efe6' : '#fcfbf8'}
           >
             {service.badge === 'Most Popular' && (
               <div style={{
@@ -177,7 +177,7 @@ export default function Services() {
           key={service.number}
           className="service-card"
           style={{
-            background: '#fffaf5',
+            background: '#fcfbf8',
             padding: '52px 48px',
             opacity: 0,
             transform: 'translateY(24px)',
@@ -191,7 +191,7 @@ export default function Services() {
             alignItems: 'center',
           }}
           onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
-          onMouseLeave={e => e.currentTarget.style.background = '#fffaf5'}
+          onMouseLeave={e => e.currentTarget.style.background = '#fcfbf8'}
         >
           {/* Left */}
           <div>

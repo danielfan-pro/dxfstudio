@@ -79,7 +79,7 @@
   --font-body: 'DM Sans', sans-serif;
   --copper: #b07d62;
   --cream: #2d2926;
-  --dark: #f7f1ea;
+  --dark: #ffffff;
   --mid: #5a4f47;
   --light: #5a4f47;
   --muted: #7a6b61;
@@ -96,7 +96,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #fcf8f3 0%, #f7f1ea 55%, #f2e9df 100%);
+  background: #ffffff;
   color: var(--cream);
   font-family: var(--font-body);
   font-weight: 300;
@@ -164,5 +164,5 @@ body::before {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: linear-gradient(180deg, #fcf8f3 0%, #f7f1ea 55%, #f2e9df 100%); }
+::-webkit-scrollbar-track { background: #ffffff; }
 ::-webkit-scrollbar-thumb { background: var(--copper); border-radius: 2px; }

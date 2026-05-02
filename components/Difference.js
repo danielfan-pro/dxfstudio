@@ -77,7 +77,7 @@ export default function Difference() {
       ref={ref}
       style={{
         padding: '120px 40px',
-        background: '#f7f1ea',
+        background: '#faf7f2',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -141,7 +141,7 @@ export default function Difference() {
               key={adv.number}
               className="adv-card"
               style={{
-                background: '#fffaf5',
+                background: '#fcfbf8',
                 padding: '44px 36px',
                 opacity: 0,
                 transform: 'translateY(20px)',
@@ -154,7 +154,7 @@ export default function Difference() {
                 e.currentTarget.style.borderTopColor = '#b07d62'
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = '#fffaf5'
+                e.currentTarget.style.background = '#fcfbf8'
                 e.currentTarget.style.borderTopColor = 'transparent'
               }}
             >
@@ -196,7 +196,7 @@ export default function Difference() {
 
         {/* Price objection callout */}
         <div style={{
-          background: '#fffaf5',
+          background: '#fcfbf8',
           border: '1px solid rgba(176,125,98,0.15)',
           padding: '56px 48px',
           position: 'relative',
