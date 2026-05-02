@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <a href="#" style={{ textDecoration: 'none' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <img
             src="/dxf-logo-gold.png"
             alt="DXF Studio logo"
@@ -43,14 +43,37 @@ export default function Navbar() {
               width: 'auto',
             }}
           />
-          <span style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            fontWeight: 300,
-            color: '#7a6b61',
-            letterSpacing: '0.25em',
-            textTransform: 'uppercase',
-          }}>Studio</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 300,
+              color: '#7a6b61',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+            }}>Studio</span>
+            <div
+              className="brand-descriptor"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+              }}
+            >
+              <div style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
+              <span style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                fontSize: '18px',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                color: '#9d8678',
+                letterSpacing: '0.12em',
+                whiteSpace: 'nowrap',
+              }}>
+                Web Design + Photography · Boston, MA
+              </span>
+            </div>
+          </div>
         </div>
       </a>
 
@@ -168,10 +191,12 @@ export default function Navbar() {
         @media (min-width: 768px) {
           .hidden-mobile { display: flex !important; }
           .show-mobile { display: none !important; }
+          .brand-descriptor { display: flex !important; }
         }
         @media (max-width: 767px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
+          .brand-descriptor { display: none !important; }
         }
       `}</style>
     </nav>

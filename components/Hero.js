@@ -38,70 +38,38 @@ export default function Hero() {
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-        {/* Eyebrow */}
-        <div className="reveal" style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '16px',
-          marginBottom: '32px',
-        }}>
-          <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
-          <span style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            fontWeight: 400,
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
-            color: '#b07d62',
-          }}>
-            Web Design + Photography · Boston, MA
-          </span>
-        </div>
-
         {/* Main headline */}
-        <h1
+        <h2
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(48px, 8.5vw, 108px)',
+            fontSize: 'clamp(42px, 6vw, 82px)',
             fontWeight: 300,
             lineHeight: 0.98,
             letterSpacing: '-0.02em',
             color: '#2d2926',
-            marginBottom: '8px',
+            marginBottom: '30px',
           }}
         >
-          If People Can't
-        </h1>
-        <h1
+          If People Can't <em style={{ fontStyle: 'italic' }}>Find You,</em><br />
+          <span style={{ color: '#b07d62' }}>They Move On.</span>
+        </h2>
+
+        <h2
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(48px, 8.5vw, 108px)',
+            fontSize: 'clamp(42px, 6vw, 82px)',
             fontWeight: 300,
             lineHeight: 0.98,
             letterSpacing: '-0.02em',
             color: '#2d2926',
-            marginBottom: '8px',
-            fontStyle: 'italic',
+            marginBottom: '32px',
           }}
         >
-          Find You
-        </h1>
-        <h1
-          className="reveal"
-          style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(48px, 8.5vw, 108px)',
-            fontWeight: 300,
-            lineHeight: 0.98,
-            letterSpacing: '-0.02em',
-            color: '#b07d62',
-            marginBottom: '48px',
-          }}
-        >
-          They Move On.
-        </h1>
+          We Build the Digital Engines<br />
+          <span style={{ color: '#b07d62' }}>That Keep Them.</span>
+        </h2>
 
         {/* Subtext */}
         <p
@@ -111,12 +79,12 @@ export default function Hero() {
             fontSize: 'clamp(15px, 1.8vw, 18px)',
             fontWeight: 300,
             color: '#7a6b61',
-            maxWidth: '520px',
+            maxWidth: '720px',
             lineHeight: 1.8,
             marginBottom: '32px',
           }}
         >
-          We design websites and brand photography for small businesses that need to look credible online, show up clearly on mobile, and turn searchers into real leads.
+          High-performance websites, premium photography, and custom mobile apps designed for local businesses that need to build trust instantly, rank on Google, and turn search traffic into real clients.
         </p>
 
         <div
