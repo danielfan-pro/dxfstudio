@@ -4,45 +4,39 @@ import { useEffect, useRef } from 'react'
 const advantages = [
   {
     number: '01',
-    title: 'Speed & SEO — Built Into the Foundation',
-    pitch: 'Wix loads thousands of lines of generic drag-and-drop code on every page. Our sites are custom-coded on Next.js and deployed on Vercel\'s global edge network.',
-    detail: 'Pages load in under 2 seconds, pass Google\'s Core Web Vitals, and rank higher in search — not because of tricks, but because the architecture is right from day one.',
-    tag: 'Performance',
+    title: 'Performance & Speed',
+    diyCatch: 'Wix and Squarespace load thousands of lines of generic, bloated code on every single page just to render simple layouts. This drastically slows down performance.',
+    advantage: "We write clean code using modern Next.js architecture. Your pages load in under 2 seconds, passing Google's strict Core Web Vitals tests to maximize your organic search rankings.",
   },
   {
     number: '02',
     title: 'Real Photography. Not Stock Photos.',
-    pitch: 'Wix gives you free stock photos of people who don\'t work for you, in spaces that aren\'t yours. That builds zero trust with local customers.',
-    detail: 'We bring a Sony A7RV to your location and photograph your team, your space, and your work. Your website looks like your business — not a template shared by 10,000 others.',
-    tag: 'Differentiator',
+    diyCatch: "You either have to rely on generic stock photos of people who don't work for you in spaces that aren't yours, or try to shoot on a phone. That builds zero trust with local customers.",
+    advantage: "We don't outsource. Our founder, Dan—the professional eye behind DanXFoto—brings a high-resolution Sony A7RV to your location to capture your team, your space, and your work. By blending top-tier in-house imagery with advanced web development, your site looks exactly like your business, not a template shared by 10,000 others.",
   },
   {
     number: '03',
-    title: 'You Own It. You\'re Not Renting It.',
-    pitch: 'Stop paying Wix and your website disappears. You can\'t move it, export it, or hand it off. You\'re locked in on their terms, forever.',
-    detail: 'We store your code on GitHub and deploy on Vercel. You own every line. If you ever want to move, take it with you. No lock-in, no hostage situations.',
-    tag: 'Ownership',
+    title: 'True Digital Ownership',
+    diyCatch: 'If you stop paying your monthly subscription to Wix or Squarespace, your website is gone forever. You are locked into their platforms and cannot move your site elsewhere.',
+    advantage: "You aren't renting a template; you own your visual and digital assets completely. No lock-in, no hostage situations.",
   },
   {
     number: '04',
     title: 'Secure by Architecture',
-    pitch: 'WordPress and Wix sites have databases — and databases get hacked. Bots probe them constantly. Most owners have no idea their site is a target.',
-    detail: 'Our static Next.js sites have no database to attack. There is nothing to break into. The most secure way to exist online in 2026, with zero extra effort on your part.',
-    tag: 'Security',
+    diyCatch: 'Traditional platforms use server-side databases. Because these databases process requests in real-time, they are constant targets for malicious bots, spam, and automated hacking scripts.',
+    advantage: 'We use a modern, database-free architecture. By pre-rendering your site into secure, high-speed files that live on a global network, we eliminate the primary entry point for hackers. You get enterprise-grade security out of the box.',
   },
   {
     number: '05',
     title: 'Accessibility & Legal Compliance',
-    pitch: 'ADA web accessibility lawsuits against small businesses have increased sharply. Most DIY templates fail basic compliance — and most owners find out via a demand letter.',
-    detail: 'Every site we build follows WCAG accessibility standards. It\'s not just good ethics — it protects your business from an increasingly common and expensive legal risk.',
-    tag: 'Compliance',
+    diyCatch: 'Drag-and-drop builders on Wix and Squarespace make it incredibly easy to accidentally create poor color contrast, incorrect heading structures, or broken screen-reader navigation.',
+    advantage: "We build with semantic HTML and strict accessibility standards from day one, minimizing your business's legal risks and ensuring a great user experience for everyone.",
   },
   {
     number: '06',
-    title: 'Done For You. Not Done By You.',
-    pitch: 'Your time is worth $100+ an hour. Wix is a tool — you still have to use it. That means 20–40 hours of your time fighting templates, writing copy, figuring out settings.',
-    detail: 'You give us the details. We deliver a finished, professional brand. Photography, development, SEO setup, domain, hosting — all handled. You run your business.',
-    tag: 'Time Saved',
+    title: 'Time Saved',
+    diyCatch: 'Building a site yourself takes dozens of hours away from running your actual business, only to end up with a site that looks DIY.',
+    advantage: 'You stay focused on running your business. We handle the technical heavy lifting, design, and photography to deliver a polished, high-performance asset in a fraction of the time.',
   },
 ]
 
@@ -133,7 +127,7 @@ export default function Difference() {
         {/* Advantages grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: '2px',
           background: 'rgba(176,125,98,0.10)',
           marginBottom: '80px',
@@ -160,20 +154,10 @@ export default function Difference() {
                 e.currentTarget.style.borderTopColor = 'transparent'
               }}
             >
-              <div style={{
-                display: 'inline-block',
-                fontFamily: 'DM Sans, sans-serif', fontSize: '10px',
-                fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase',
-                color: '#b07d62', border: '1px solid rgba(176,125,98,0.3)',
-                padding: '4px 10px', marginBottom: '24px',
-              }}>
-                {adv.tag}
-              </div>
-
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', marginBottom: '20px' }}>
                 <span style={{
                   fontFamily: 'Cormorant Garamond, serif', fontSize: '13px',
-                  color: 'rgba(176,125,98,0.4)', letterSpacing: '0.1em',
+                  color: '#b07d62', letterSpacing: '0.16em',
                   flexShrink: 0, marginTop: '5px',
                 }}>{adv.number}</span>
                 <h3 style={{
@@ -182,19 +166,82 @@ export default function Difference() {
                 }}>{adv.title}</h3>
               </div>
 
-              <p style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '14px', fontWeight: 400,
-                color: '#5a4f47', lineHeight: 1.8, marginBottom: '16px', opacity: 0.85,
-              }}>{adv.pitch}</p>
+              <div
+                className="adv-split"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+                  alignItems: 'stretch',
+                }}
+              >
+                <div style={{
+                  paddingRight: '24px',
+                  borderRight: '1px solid rgba(176,125,98,0.12)',
+                }}>
+                  <p style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '13px',
+                    fontWeight: 500,
+                    color: '#7a6b61',
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>The DIY Catch</p>
 
-              <p style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 300,
-                color: '#7a6b61', lineHeight: 1.8,
-                paddingTop: '16px', borderTop: '1px solid rgba(176,125,98,0.1)',
-              }}>{adv.detail}</p>
+                  <p style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '14px',
+                    fontWeight: 300,
+                    color: '#8b7d73',
+                    lineHeight: 1.8,
+                  }}>{adv.diyCatch}</p>
+                </div>
+
+                <div style={{
+                  paddingLeft: '24px',
+                }}>
+                  <p style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    color: '#b07d62',
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    marginBottom: '10px',
+                  }}>The DXF Advantage</p>
+
+                  <p style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '14px',
+                    fontWeight: 500,
+                    color: '#2d2926',
+                    lineHeight: 1.85,
+                  }}>{adv.advantage}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            #about .adv-split {
+              grid-template-columns: 1fr !important;
+            }
+
+            #about .adv-split > div:first-child {
+              padding-right: 0 !important;
+              padding-bottom: 18px !important;
+              border-right: none !important;
+              border-bottom: 1px solid rgba(176,125,98,0.12) !important;
+              margin-bottom: 18px !important;
+            }
+
+            #about .adv-split > div:last-child {
+              padding-left: 0 !important;
+            }
+          }
+        `}</style>
 
       </div>
     </section>
