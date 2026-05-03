@@ -125,7 +125,9 @@ export default function Difference() {
         </div>
 
         {/* Advantages grid */}
-        <div style={{
+        <div
+          className="advantages-grid"
+          style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: '2px',
@@ -225,6 +227,10 @@ export default function Difference() {
 
         <style>{`
           @media (max-width: 900px) {
+            #about .advantages-grid {
+              grid-template-columns: 1fr !important;
+            }
+
             #about .adv-split {
               grid-template-columns: 1fr !important;
             }
