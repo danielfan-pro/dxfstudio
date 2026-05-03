@@ -98,7 +98,7 @@ export default function Difference() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
         {/* Section header */}
-        <div style={{ marginBottom: '80px', maxWidth: '700px' }}>
+        <div style={{ marginBottom: '80px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
             <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
             <span style={{
@@ -110,21 +110,24 @@ export default function Difference() {
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(38px, 5vw, 64px)',
             fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '24px',
+            width: '100%',
           }}>
-            Wix is a <em style={{ color: '#b07d62' }}>$25/month tool.</em><br />
-            We deliver a business asset.
+            Wix and Squarespace are $25/month tools.<br />
+            We deliver a <em style={{ color: '#b07d62' }}>business asset.</em>
           </h2>
           <p style={{
             fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 300,
-            color: '#7a6b61', lineHeight: 1.9, marginBottom: '12px',
+            color: '#7a6b61', lineHeight: 1.9, marginBottom: '20px',
+            width: '100%',
           }}>
-            If a better website brings you just one or two extra clients a year, it has already paid for itself many times over. Wix is an expense. DXF Studio is an investment.
+            Wix and Squarespace are excellent $25/month tools. But by the time you factor in your own time spent fighting with templates, the limitations of generic stock photography, slower load speeds, and the local SEO gap, those DIY sites cost far more in missed opportunities and lost clients than they save.
           </p>
           <p style={{
             fontFamily: 'DM Sans, sans-serif', fontSize: '16px',
             fontWeight: 300, color: '#7a6b61', lineHeight: 1.9,
+            width: '100%',
           }}>
-            Here is exactly why.
+            Unlike platforms that keep your site locked down, our clients have full use and true ownership of their code and visual assets.
           </p>
         </div>
 
@@ -192,56 +195,6 @@ export default function Difference() {
               }}>{adv.detail}</p>
             </div>
           ))}
-        </div>
-
-        {/* Price objection callout */}
-        <div style={{
-          background: '#fcfbf8',
-          border: '1px solid rgba(176,125,98,0.15)',
-          padding: '56px 48px',
-          position: 'relative',
-          overflow: 'hidden',
-        }}>
-          <div style={{
-            position: 'absolute', top: 0, left: 0, right: 0,
-            height: '2px',
-            background: 'linear-gradient(to right, #b07d62, transparent)',
-          }} />
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '48px', alignItems: 'center',
-          }}>
-            <div>
-              <div style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '11px',
-                letterSpacing: '0.3em', textTransform: 'uppercase',
-                color: '#b07d62', marginBottom: '20px',
-              }}>The honest answer</div>
-              <h3 style={{
-                fontFamily: 'Cormorant Garamond, serif',
-                fontSize: 'clamp(28px, 3.5vw, 44px)',
-                fontWeight: 300, color: '#2d2926', lineHeight: 1.2,
-              }}>
-                "But Wix is only<br />
-                <em style={{ color: '#b07d62' }}>$25 a month."</em>
-              </h3>
-            </div>
-            <div>
-              <p style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '15px',
-                fontWeight: 300, color: '#7a6b61', lineHeight: 1.9, marginBottom: '20px',
-              }}>
-                Wix is a $25/month tool. You still have to build it, photograph it, and maintain it yourself — or hire someone to. Add their time, the stock photo limitations, slower load speed, and the SEO gap, and that "$25 site" costs far more in lost business than it saves.
-              </p>
-              <p style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '15px',
-                fontWeight: 300, color: '#5a4f47', lineHeight: 1.9, fontStyle: 'italic',
-              }}>
-                If our faster site, better photography, and stronger SEO bring you just one extra client a month — it has paid for itself many times over.
-              </p>
-            </div>
-          </div>
         </div>
 
       </div>

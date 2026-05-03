@@ -97,11 +97,22 @@ export default function Services() {
           fontWeight: 300,
           lineHeight: 1.1,
           color: '#2d2926',
-          maxWidth: '600px',
+          width: '100%',
+          marginBottom: '24px',
         }}>
           Everything a small business needs to{' '}
           <em style={{ color: '#b07d62' }}>look the part</em>
         </h2>
+        <p style={{
+          fontFamily: 'DM Sans, sans-serif',
+          fontSize: '16px',
+          fontWeight: 300,
+          color: '#7a6b61',
+          lineHeight: 1.9,
+          width: '100%',
+        }}>
+          From high-performance websites and authentic photography to launch support and ongoing care, we build the systems that help small businesses show up clearly and earn trust faster.
+        </p>
       </div>
 
       {/* Services grid — first 4 in 2x2, iOS full width below */}

@@ -98,10 +98,9 @@ export default function Pricing() {
           fontWeight: 300,
           color: '#2d2926',
           lineHeight: 1.1,
-          maxWidth: '500px',
+          width: '100%',
         }}>
-          Simple, transparent<br />
-          <em style={{ color: '#b07d62' }}>pricing</em>
+          Simple, transparent <em style={{ color: '#b07d62' }}>pricing</em>
         </h2>
       </div>
 

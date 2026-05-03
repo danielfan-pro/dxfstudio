@@ -38,7 +38,6 @@ export default function Hero() {
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
-        {/* Main headline */}
         <h2
           className="reveal"
           style={{
@@ -49,6 +48,7 @@ export default function Hero() {
             letterSpacing: '-0.02em',
             color: '#2d2926',
             marginBottom: '30px',
+            width: '100%',
           }}
         >
           If People Can't <em style={{ fontStyle: 'italic' }}>Find You,</em><br />
@@ -65,13 +65,13 @@ export default function Hero() {
             letterSpacing: '-0.02em',
             color: '#2d2926',
             marginBottom: '32px',
+            width: '100%',
           }}
         >
           We Build the Digital Engines<br />
           <span style={{ color: '#b07d62' }}>That Keep Them.</span>
         </h2>
 
-        {/* Subtext */}
         <p
           className="reveal"
           style={{
@@ -79,20 +79,20 @@ export default function Hero() {
             fontSize: 'clamp(15px, 1.8vw, 18px)',
             fontWeight: 300,
             color: '#7a6b61',
-            maxWidth: '720px',
             lineHeight: 1.8,
-            marginBottom: '32px',
+            width: '100%',
+            marginBottom: '40px',
           }}
         >
           High-performance websites, premium photography, and custom mobile apps designed for local businesses that need to build trust instantly, rank on Google, and turn search traffic into real clients.
         </p>
 
         <div
-          className="reveal"
+          className="reveal hero-proof-grid"
           style={{
-            display: 'flex',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
             gap: '28px',
-            flexWrap: 'wrap',
             marginBottom: '40px',
           }}
         >
@@ -101,7 +101,7 @@ export default function Hero() {
             { title: 'Mobile-first', label: 'because most traffic is on phones' },
             { title: 'Real photos', label: 'so your business looks trustworthy' },
           ].map((item) => (
-            <div key={item.title} style={{ minWidth: '180px' }}>
+            <div key={item.title}>
               <div style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '28px',
@@ -126,8 +126,7 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* CTAs */}
-        <div className="reveal" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <div className="reveal hero-cta-row" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           <a
             href="#contact"
             style={{
@@ -169,6 +168,14 @@ export default function Hero() {
             See Our Work
           </a>
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            #hero .hero-proof-grid {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        `}</style>
       </div>
 
     </section>
