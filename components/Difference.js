@@ -102,8 +102,8 @@ export default function Difference() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
             <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
             <span style={{
-              fontFamily: 'DM Sans, sans-serif', fontSize: '11px',
-              letterSpacing: '0.3em', textTransform: 'uppercase', color: '#b07d62',
+              fontFamily: 'DM Sans, sans-serif', fontSize: '13px',
+              letterSpacing: '0.26em', textTransform: 'uppercase', color: '#b07d62',
             }}>Why DXF Studio</span>
           </div>
           <h2 style={{
@@ -112,7 +112,6 @@ export default function Difference() {
             fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '24px',
             width: '100%',
           }}>
-            Wix and Squarespace are $25/month tools.<br />
             We deliver a <em style={{ color: '#b07d62' }}>business asset.</em>
           </h2>
           <p style={{

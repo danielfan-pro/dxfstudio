@@ -6,7 +6,7 @@ const services = [
     number: '01',
     title: 'Web Design & Development',
     description: "Custom-built on Next.js — lightning-fast, mobile-first, and architected to rank on Google. We don't use templates or drag-and-drop builders. We write clean code to ensure your site is a true business asset.",
-    features: ['Mobile-first responsive design', 'Core Web Vitals optimized', 'Search engine optimization (SEO)-ready structure', 'Content management system (CMS) so you can update your own content'],
+    features: ['Mobile-first responsive design', 'Core Web Vitals optimized', 'Search engine optimization (SEO)-ready structure', 'Built-in Content management system (CMS) for easy visual and text updates'],
     badge: null,
     premium: false,
   },
@@ -14,7 +14,7 @@ const services = [
     number: '02',
     title: 'Brand Photography',
     description: 'Authentic brand photography of your team, workspace, and products. While stock photos feel generic, real visual storytelling builds immediate trust. We coordinate your photo shoot and digital build seamlessly.',
-    features: ['Business & team headshots', 'Product & space photography', 'Same-day shoot + web build', 'Edited gallery delivered in 2 weeks'],
+    features: ['Business & team headshots', 'Product & space photography', 'High-resolution digital gallery', 'Edited gallery delivered in 2 weeks'],
     badge: null,
     premium: false,
   },
@@ -22,7 +22,7 @@ const services = [
     number: '03',
     title: 'Launch Package',
     description: 'The full combo — web design and photography bundled together. Everything a new or relaunching business needs to show up professionally from day one.',
-    features: ['Custom website + photography', 'Google Business Profile setup', 'Local SEO foundation', 'Hosting & maintenance plan'],
+    features: ['All-in-one website build + on-site brand photo shoot', 'Google Business Profile setup', 'Local SEO foundation', 'Hosting & maintenance plan'],
     badge: 'Most Popular',
     premium: false,
   },
@@ -30,7 +30,7 @@ const services = [
     number: '04',
     title: 'Ongoing Care',
     description: 'Your website is never truly "done." We offer monthly plans to keep it updated, secure, and performing — so you can focus on running your business.',
-    features: ['Monthly content updates', 'Security & performance monitoring', 'Quarterly photo refresh available', 'Priority support'],
+    features: ['Monthly content updates', 'Security & performance monitoring', 'Discounted rates on photo updates', 'Priority support'],
     badge: null,
     premium: false,
   },
@@ -85,8 +85,8 @@ export default function Services() {
           <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            letterSpacing: '0.3em',
+            fontSize: '13px',
+            letterSpacing: '0.26em',
             textTransform: 'uppercase',
             color: '#b07d62',
           }}>What We Offer</span>
@@ -101,7 +101,7 @@ export default function Services() {
           marginBottom: '24px',
         }}>
           Everything a small business needs to{' '}
-          <em style={{ color: '#b07d62' }}>look the part</em>
+          <em style={{ color: '#b07d62' }}>command trust and win clients.</em>
         </h2>
         <p style={{
           fontFamily: 'DM Sans, sans-serif',

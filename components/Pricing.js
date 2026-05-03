@@ -86,8 +86,8 @@ export default function Pricing() {
           <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
           <span style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            letterSpacing: '0.3em',
+            fontSize: '13px',
+            letterSpacing: '0.26em',
             textTransform: 'uppercase',
             color: '#b07d62',
           }}>Pricing</span>

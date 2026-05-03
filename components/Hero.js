@@ -18,12 +18,12 @@ export default function Hero() {
       ref={ref}
       id="hero"
       style={{
-        minHeight: '100vh',
+        minHeight: 'auto',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         position: 'relative',
         overflow: 'hidden',
-        padding: '120px 40px 80px',
+        padding: '104px 40px 72px',
       }}
     >
       {/* Copper glow */}
@@ -42,34 +42,32 @@ export default function Hero() {
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(42px, 6vw, 82px)',
+            fontSize: 'clamp(32px, 4.2vw, 60px)',
             fontWeight: 300,
-            lineHeight: 0.98,
+            lineHeight: 1.02,
             letterSpacing: '-0.02em',
             color: '#2d2926',
-            marginBottom: '30px',
+            marginBottom: '22px',
             width: '100%',
           }}
         >
-          If People Can't <em style={{ fontStyle: 'italic' }}>Find You,</em><br />
-          <span style={{ color: '#b07d62' }}>They Move On.</span>
+          If People Can't Find You, <span style={{ color: '#b07d62' }}>They Move On.</span>
         </h2>
 
         <h2
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(42px, 6vw, 82px)',
+            fontSize: 'clamp(32px, 4.2vw, 60px)',
             fontWeight: 300,
-            lineHeight: 0.98,
+            lineHeight: 1.02,
             letterSpacing: '-0.02em',
             color: '#2d2926',
-            marginBottom: '32px',
+            marginBottom: '28px',
             width: '100%',
           }}
         >
-          We Build the Digital Engines<br />
-          <span style={{ color: '#b07d62' }}>That Keep Them.</span>
+          We Build the Digital Engines <span style={{ color: '#b07d62' }}>That Keep Them.</span>
         </h2>
 
         <p
