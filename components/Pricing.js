@@ -40,8 +40,8 @@ const plans = [
     description: 'The complete package. A custom website and a professional photo shoot — launched together.',
     features: [
       '5-page custom website',
-      'Half-day on-location brand photo shoot',
-      'Edited gallery (40+ images) delivered in 2 weeks',
+      '90-minute on-location brand photo shoot',
+      '20 professionally edited high-resolution photos delivered in 2 weeks',
       'CMS — update your own content',
       'Google Business Profile setup',
       'Local SEO foundation',
@@ -189,90 +189,96 @@ export default function Pricing() {
                 <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '2px', background: copper }} />
               )}
 
-              {plan.badge && (
+              <div style={{ minHeight: '180px' }}>
+                <div style={{ minHeight: '30px', marginBottom: '20px' }}>
+                  {plan.badge && (
+                    <div style={{
+                      display: 'inline-block',
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontSize: '10px',
+                      fontWeight: 500,
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: copper,
+                      border: '1px solid rgba(176,125,98,0.35)',
+                      padding: '4px 10px',
+                      alignSelf: 'flex-start',
+                    }}>{plan.badge}</div>
+                  )}
+                </div>
+
                 <div style={{
-                  display: 'inline-block',
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '10px',
+                  fontSize: '11px',
                   fontWeight: 500,
-                  letterSpacing: '0.2em',
+                  letterSpacing: '0.25em',
                   textTransform: 'uppercase',
-                  color: copper,
-                  border: '1px solid rgba(176,125,98,0.35)',
-                  padding: '4px 10px',
-                  marginBottom: '20px',
-                  alignSelf: 'flex-start',
-                }}>{plan.badge}</div>
-              )}
+                  color: plan.highlight ? copper : muted,
+                  marginBottom: '0',
+                  marginTop: '0',
+                }}>{plan.name}</div>
 
-              <div style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '11px',
-                fontWeight: 500,
-                letterSpacing: '0.25em',
-                textTransform: 'uppercase',
-                color: plan.highlight ? copper : muted,
-                marginBottom: !plan.badge ? '20px' : '0',
-                marginTop: '0',
-              }}>{plan.name}</div>
-
-              <div style={{ marginTop: '20px', marginBottom: '4px', display: 'flex', alignItems: 'flex-end', gap: '8px', flexWrap: 'wrap' }}>
-                <span style={{
-                  fontFamily: 'Cormorant Garamond, serif',
-                  fontSize: '48px',
-                  fontWeight: 400,
-                  color: ink,
-                  lineHeight: 1,
-                }}>{plan.upfront}</span>
-                <span style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '12px',
-                  color: muted,
-                  marginBottom: '8px',
-                }}>upfront</span>
-              </div>
-
-              {plan.monthly && (
-                <div style={{ marginBottom: '8px' }}>
+                <div style={{ marginTop: '20px', marginBottom: '4px', display: 'flex', alignItems: 'flex-end', gap: '8px', flexWrap: 'wrap' }}>
                   <span style={{
                     fontFamily: 'Cormorant Garamond, serif',
-                    fontSize: '28px',
-                    fontWeight: 300,
-                    color: copper,
-                  }}>
-                    {billing === 'annual' ? `${plan.annual}/yr` : `${plan.monthly}/mo`}
-                  </span>
+                    fontSize: '48px',
+                    fontWeight: 400,
+                    color: ink,
+                    lineHeight: 1,
+                  }}>{plan.upfront}</span>
                   <span style={{
                     fontFamily: 'DM Sans, sans-serif',
                     fontSize: '12px',
                     color: muted,
-                    marginLeft: '8px',
-                  }}>
-                    {billing === 'annual' ? '(2 months free)' : 'after setup'}
-                  </span>
+                    marginBottom: '8px',
+                  }}>upfront</span>
                 </div>
-              )}
 
-              {plan.yearTotal && (
+                <div style={{ minHeight: '50px', marginBottom: '8px' }}>
+                  {plan.monthly && (
+                    <div>
+                      <span style={{
+                        fontFamily: 'Cormorant Garamond, serif',
+                        fontSize: '28px',
+                        fontWeight: 300,
+                        color: copper,
+                      }}>
+                        {billing === 'annual' ? `${plan.annual}/yr` : `${plan.monthly}/mo`}
+                      </span>
+                      <span style={{
+                        fontFamily: 'DM Sans, sans-serif',
+                        fontSize: '12px',
+                        color: muted,
+                        marginLeft: '8px',
+                      }}>
+                        {billing === 'annual' ? '(2 months free)' : 'after setup'}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <div style={{ minHeight: '24px', marginBottom: '4px' }}>
+                  {plan.yearTotal && (
+                    <div style={{
+                      fontFamily: 'DM Sans, sans-serif',
+                      fontSize: '12px',
+                      color: muted,
+                    }}>
+                      Year 1 total: <span style={{ color: lightText }}>{billing === 'annual' ? plan.yearTotalAnnual : plan.yearTotal}</span>
+                    </div>
+                  )}
+                </div>
+
                 <div style={{
                   fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '12px',
-                  color: muted,
-                  marginBottom: '4px',
-                }}>
-                  Year 1 total: <span style={{ color: lightText }}>{billing === 'annual' ? plan.yearTotalAnnual : plan.yearTotal}</span>
-                </div>
-              )}
-
-              <div style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '11px',
-                letterSpacing: '0.1em',
-                textTransform: 'uppercase',
-                color: plan.highlight ? copper : muted,
-                marginBottom: '24px',
-                opacity: 0.8,
-              }}>{plan.commitment}</div>
+                  fontSize: '11px',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: plan.highlight ? copper : muted,
+                  marginBottom: '24px',
+                  opacity: 0.8,
+                }}>{plan.commitment}</div>
+              </div>
 
               <div style={{ width: '30px', height: '1px', background: copper, marginBottom: '20px' }} />
 
