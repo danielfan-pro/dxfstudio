@@ -88,7 +88,7 @@ export default function Hero() {
           We Build the Digital Engines <span style={{ color: '#b07d62' }}>That Keep Them.</span>
         </h2>
 
-        <p
+        <div
           className="reveal"
           style={{
             fontFamily: 'DM Sans, sans-serif',
@@ -100,8 +100,13 @@ export default function Hero() {
             marginBottom: '40px',
           }}
         >
-          Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on. We bundle advanced web development with premium in-house photography. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
-        </p>
+          <p style={{ marginBottom: '12px' }}>
+            Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on.
+          </p>
+          <p>
+            We pair <strong>advanced web development</strong> with <strong>premium in-house photography</strong>. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
+          </p>
+        </div>
 
         <div
           className="reveal hero-proof-grid"
