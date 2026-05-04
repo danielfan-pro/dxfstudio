@@ -146,7 +146,7 @@ export default function Hero() {
 
         <div className="reveal hero-cta-row" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           <a
-            href="#contact"
+            href="/get-started"
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '12px',

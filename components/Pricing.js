@@ -15,7 +15,7 @@ const plans = [
     commitment: '12-month minimum',
     description: 'A clean, fast, professional website for businesses that need to get online the right way.',
     features: [
-      '3-page custom website',
+      'Up to 5-page custom website',
       'Mobile-first & Core Web Vitals optimized',
       'SEO-ready structure',
       'CMS — update your own content',
@@ -29,7 +29,7 @@ const plans = [
   {
     id: 'launch',
     name: 'Web + Photos',
-    badge: 'Most Popular',
+    badge: null,
     highlight: true,
     upfront: '$499',
     monthly: '$79',
@@ -39,7 +39,7 @@ const plans = [
     commitment: '12-month minimum',
     description: 'The complete package. A custom website and a professional photo shoot — launched together.',
     features: [
-      '5-page custom website',
+      'Up to 5-page custom website',
       '90-minute on-location brand photo shoot',
       '20 professionally edited high-resolution photos delivered in 2 weeks',
       'CMS — update your own content',
@@ -64,7 +64,7 @@ const plans = [
     commitment: 'One-time · No monthly fees',
     description: 'For businesses that want full ownership and control from day one.',
     features: [
-      '5-page custom website',
+      'Up to 5-page custom website',
       '90-minute on-location brand photo shoot',
       '20 professionally edited high-resolution photos delivered in 2 weeks',
       'Local SEO foundation',
@@ -74,7 +74,7 @@ const plans = [
       'One-time delivery — no recurring fees',
     ],
     clientNote: 'You own and manage everything after handoff. You are responsible for your own hosting via your global CDN, annual domain renewal, and all ongoing maintenance. On-demand support is available at $150/hr. An optional Annual Checkup package covers dependency updates, performance audit, and security review.',
-    cta: 'Inquire',
+    cta: 'Email Inquiry',
   },
 ]
 
@@ -355,7 +355,7 @@ export default function Pricing() {
               )}
 
               <a
-                href="#contact"
+                href={plan.id === 'portfolio' ? 'mailto:studio@danxfoto.com?subject=Portfolio%20Buyout%20Inquiry' : '/get-started'}
                 style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '12px',

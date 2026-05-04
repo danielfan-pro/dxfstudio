@@ -23,7 +23,7 @@ const services = [
     title: 'Launch Package',
     description: 'The full combo — web design and photography bundled together. Everything a new or relaunching business needs to show up professionally from day one.',
     features: ['All-in-one website build + on-site brand photo shoot', 'Google Business Profile setup', 'Local SEO foundation', 'Hosting & maintenance plan'],
-    badge: 'Most Popular',
+    badge: null,
     premium: false,
   },
   {
@@ -248,7 +248,7 @@ export default function Services() {
               ))}
             </ul>
             <a
-              href="#contact"
+              href="mailto:studio@danxfoto.com?subject=iOS%20Project%20Inquiry"
               style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 500,
                 letterSpacing: '0.2em', textTransform: 'uppercase',

@@ -1,4 +1,11 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
+
 export default function Footer() {
+  const pathname = usePathname()
+  const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
+
   return (
     <footer style={{
       padding: '48px 40px',
@@ -47,7 +54,7 @@ export default function Footer() {
           {['Services', 'Work', 'About', 'Contact'].map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={homeHref(link.toLowerCase())}
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',

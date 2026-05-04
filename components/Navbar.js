@@ -1,9 +1,11 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -12,6 +14,8 @@ export default function Navbar() {
   }, [])
 
   const links = ['Services', 'Work', 'About', 'Contact']
+  const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
+  const rootHref = pathname === '/' ? '#' : '/'
 
   return (
     <nav
@@ -32,7 +36,7 @@ export default function Navbar() {
       }}
     >
       {/* Logo */}
-      <a href="#" style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+      <a href={rootHref} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
         <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <img
             src="/danxfoto-logo-gold.png"
@@ -82,7 +86,7 @@ export default function Navbar() {
         {links.map(link => (
           <a
             key={link}
-            href={`#${link.toLowerCase()}`}
+            href={homeHref(link.toLowerCase())}
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '12px',
@@ -101,7 +105,7 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="#contact"
+          href="/get-started"
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
@@ -169,7 +173,7 @@ export default function Navbar() {
           {links.map(link => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={homeHref(link.toLowerCase())}
               onClick={() => setMenuOpen(false)}
               style={{
                 fontFamily: 'Cormorant Garamond, serif',
