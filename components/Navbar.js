@@ -35,45 +35,43 @@ export default function Navbar() {
       <a href="#" style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
         <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <img
-            src="/dxf-logo-gold.png"
+            src="/danxfoto-logo-gold.png"
             alt="DanXFoto Studio logo"
             className="brand-logo"
             style={{
               display: 'block',
-              height: '34px',
+              height: '48px',
               width: 'auto',
             }}
           />
-          <div className="brand-copy" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <span className="brand-studio" style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '11px',
+          <span className="brand-studio" style={{
+            fontFamily: 'DM Sans, sans-serif',
+            fontSize: '11px',
+            fontWeight: 300,
+            color: '#7a6b61',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+          }}>Studio</span>
+          <div
+            className="brand-descriptor"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+            }}
+          >
+            <div className="brand-divider" style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
+            <span className="brand-descriptor-text" style={{
+              fontFamily: 'Cormorant Garamond, serif',
+              fontSize: '15px',
+              fontStyle: 'italic',
               fontWeight: 300,
-              color: '#7a6b61',
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-            }}>Studio</span>
-            <div
-              className="brand-descriptor"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-              }}
-            >
-              <div className="brand-divider" style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
-              <span className="brand-descriptor-text" style={{
-                fontFamily: 'Cormorant Garamond, serif',
-                fontSize: '15px',
-                fontStyle: 'italic',
-                fontWeight: 300,
-                color: '#9d8678',
-                letterSpacing: '0.12em',
-                whiteSpace: 'nowrap',
-              }}>
-                Web Design + Photography
-              </span>
-            </div>
+              color: '#9d8678',
+              letterSpacing: '0.12em',
+              whiteSpace: 'nowrap',
+            }}>
+              Web Design + Photography
+            </span>
           </div>
         </div>
       </a>
@@ -189,21 +187,39 @@ export default function Navbar() {
       )}
 
       <style>{`
-        @media (min-width: 768px) {
+        @media (min-width: 1101px) {
           .hidden-mobile { display: flex !important; }
           .show-mobile { display: none !important; }
           .brand-descriptor { display: flex !important; }
         }
-        @media (max-width: 767px) {
+        @media (max-width: 1100px) {
           nav {
             padding-left: 20px !important;
             padding-right: 20px !important;
           }
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
+          .brand-lockup { gap: 10px !important; }
+          .brand-logo { height: 38px !important; }
+          .brand-studio {
+            font-size: 10px !important;
+            letter-spacing: 0.22em !important;
+          }
+          .brand-descriptor { display: flex !important; gap: 8px !important; }
+          .brand-divider { height: 18px !important; }
+          .brand-descriptor-text {
+            font-size: 11px !important;
+            letter-spacing: 0.08em !important;
+            white-space: nowrap !important;
+          }
+        }
+        @media (max-width: 767px) {
+          nav {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
           .brand-lockup { gap: 8px !important; }
-          .brand-logo { height: 26px !important; }
-          .brand-copy { gap: 8px !important; }
+          .brand-logo { height: 34px !important; }
           .brand-studio {
             font-size: 9px !important;
             letter-spacing: 0.22em !important;

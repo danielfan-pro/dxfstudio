@@ -19,23 +19,28 @@ export default function Footer() {
       >
         <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img
-            src="/dxf-logo-gold.png"
+            src="/danxfoto-logo-gold.png"
             alt="DanXFoto Studio logo"
             className="footer-logo"
             style={{
               display: 'block',
-              height: '30px',
+              height: '42px',
               width: 'auto',
             }}
           />
-          <span className="footer-studio" style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '10px',
-            fontWeight: 300,
-            color: '#7a6b61',
-            letterSpacing: '0.25em',
-            textTransform: 'uppercase',
-          }}>Studio</span>
+          <span
+            className="footer-studio"
+            style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 300,
+              color: '#7a6b61',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Studio
+          </span>
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
@@ -82,6 +87,10 @@ export default function Footer() {
           }
           .footer-brand {
             justify-content: center !important;
+          }
+          .footer-studio {
+            font-size: 10px !important;
+            letter-spacing: 0.22em !important;
           }
           .footer-links {
             justify-content: center !important;
