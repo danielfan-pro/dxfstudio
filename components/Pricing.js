@@ -119,29 +119,6 @@ export default function Pricing() {
           }}>
             Simple, transparent <em style={{ color: copper }}>pricing</em>
           </h2>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '15px',
-            fontWeight: 300,
-            color: muted,
-            lineHeight: 1.9,
-            width: '100%',
-            marginBottom: '18px',
-          }}>
-            Start with a low upfront cost and a 12-month commitment at $79/mo — which covers hosting, domain renewal, and ongoing maintenance for as long as we manage your site. Pay the year upfront instead and get 2 months free.
-          </p>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '15px',
-            fontWeight: 300,
-            color: muted,
-            lineHeight: 1.9,
-            width: '100%',
-            marginBottom: '36px',
-          }}>
-            After your first year, you can continue month-to-month at $99/mo, renew annually at $990/yr and get 2 months free again, or buy out for $800 to own all your code, domain, and hosting outright with no further monthly fees. Prefer full ownership from day one? The Portfolio Buyout plan at $3,499 gets you everything delivered and transferred — no subscriptions, no commitments.
-          </p>
-
           <div style={{ display: 'inline-flex', border: '1px solid rgba(176,125,98,0.25)', overflow: 'hidden', flexWrap: 'wrap' }}>
             {[
               { key: 'monthly', label: 'Pay Monthly' },
@@ -407,7 +384,7 @@ export default function Pricing() {
             color: muted,
             lineHeight: 1.9,
             marginBottom: '28px',
-            maxWidth: '600px',
+            width: '100%',
           }}>
             Once your commitment period ends, you have three flexible options. We&apos;ll reach out 60 days before your year ends to walk through them together.
           </p>
