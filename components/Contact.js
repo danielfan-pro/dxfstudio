@@ -86,7 +86,7 @@ export default function Contact() {
               width: '100%',
             }}
           >
-            Let's build something <em style={{ color: '#b07d62' }}>worth finding.</em>
+            Let&apos;s Build Something <em style={{ color: '#b07d62' }}>Great Together</em>
           </h2>
 
           <p
@@ -104,7 +104,7 @@ export default function Contact() {
               width: '100%',
             }}
           >
-            No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we're the right fit.
+            Based in Melrose, we partner locally with small businesses throughout Greater Boston and the North Shore. No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we&apos;re the right fit.
           </p>
 
           <div

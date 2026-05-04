@@ -73,7 +73,7 @@ const plans = [
       'Domain transfer to client\'s registrar',
       'One-time delivery — no recurring fees',
     ],
-    clientNote: 'You own and manage everything after handoff. You are responsible for your own hosting via Vercel, annual domain renewal, and all ongoing maintenance. On-demand support is available at $150/hr. An optional Annual Checkup package covers dependency updates, performance audit, and security review.',
+    clientNote: 'You own and manage everything after handoff. You are responsible for your own hosting via your global CDN, annual domain renewal, and all ongoing maintenance. On-demand support is available at $150/hr. An optional Annual Checkup package covers dependency updates, performance audit, and security review.',
     cta: 'Inquire',
   },
 ]
@@ -139,7 +139,7 @@ export default function Pricing() {
             width: '100%',
             marginBottom: '36px',
           }}>
-            After your first year, you can continue month-to-month at $99/mo, renew annually at $990/yr and get 2 months free again, or buy out for $800 to own all your code, domain, and hosting outright with no further monthly fees. Prefer full ownership from day one? The Portfolio Buyout plan at $1,200 gets you everything delivered and transferred — no subscriptions, no commitments.
+            After your first year, you can continue month-to-month at $99/mo, renew annually at $990/yr and get 2 months free again, or buy out for $800 to own all your code, domain, and hosting outright with no further monthly fees. Prefer full ownership from day one? The Portfolio Buyout plan at $3,499 gets you everything delivered and transferred — no subscriptions, no commitments.
           </p>
 
           <div style={{ display: 'inline-flex', border: '1px solid rgba(176,125,98,0.25)', overflow: 'hidden', flexWrap: 'wrap' }}>
