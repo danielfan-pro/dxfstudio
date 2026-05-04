@@ -103,6 +103,16 @@ export default function Hero() {
           <p style={{ marginBottom: '12px' }}>
             Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on.
           </p>
+          <p style={{
+            fontSize: 'clamp(18px, 2.2vw, 24px)',
+            fontWeight: 700,
+            letterSpacing: '0.01em',
+            color: '#2d2926',
+            lineHeight: 1.45,
+            marginBottom: '12px',
+          }}>
+            Custom Websites &amp; Professional Photography — All in One
+          </p>
           <p>
             We pair <strong style={{ fontWeight: 700, color: '#2d2926' }}>advanced web development</strong> with <strong style={{ fontWeight: 700, color: '#2d2926' }}>premium in-house photography</strong>. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
           </p>
