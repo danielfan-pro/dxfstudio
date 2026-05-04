@@ -5,7 +5,7 @@ const services = [
   {
     number: '01',
     title: 'Web Design & Development',
-    description: "Custom-built on Next.js — lightning-fast, mobile-first, and architected to rank on Google. We don't use templates or drag-and-drop builders. We write clean code to ensure your site is a true business asset.",
+    description: 'High-performance websites built on Next.js. We write clean code from scratch—no slow templates or drag-and-drop builders—to ensure your site is a true business asset.',
     features: ['Mobile-first responsive design', 'Core Web Vitals optimized', 'Search engine optimization (SEO)-ready structure', 'Built-in Content management system (CMS) for easy visual and text updates'],
     badge: null,
     premium: false,
@@ -13,7 +13,7 @@ const services = [
   {
     number: '02',
     title: 'Brand Photography',
-    description: 'Authentic brand photography of your team, workspace, and products. While stock photos feel generic, real visual storytelling builds immediate trust. We coordinate your photo shoot and digital build seamlessly.',
+    description: 'High-end on-site photography of your real team, workspace, and work. Authentic visual storytelling builds immediate customer trust while making your brand look instantly credible.',
     features: ['Business & team headshots', 'Product & space photography', 'High-resolution digital gallery', 'Edited gallery delivered in 2 weeks'],
     badge: null,
     premium: false,
@@ -21,7 +21,7 @@ const services = [
   {
     number: '03',
     title: 'Launch Package',
-    description: 'The full combo — web design and photography bundled together. Everything a new or relaunching business needs to show up professionally from day one.',
+    description: 'The ultimate all-in-one digital presence. We bundle custom web development and professional brand photography to launch your business right from day one.',
     features: ['All-in-one website build + on-site brand photo shoot', 'Google Business Profile setup', 'Local SEO foundation', 'Hosting & maintenance plan'],
     badge: null,
     premium: false,
@@ -29,7 +29,7 @@ const services = [
   {
     number: '04',
     title: 'Ongoing Care',
-    description: 'Your website is never truly "done." We offer monthly plans to keep it updated, secure, and performing — so you can focus on running your business.',
+    description: "A website shouldn't sit still. Our monthly plans keep your digital presence fast, secure, and updated so you can focus entirely on running your business.",
     features: ['Monthly content updates', 'Security & performance monitoring', 'Discounted rates on photo updates', 'Priority support'],
     badge: null,
     premium: false,
@@ -37,8 +37,8 @@ const services = [
   {
     number: '05',
     title: 'iOS App Development',
-    description: 'For businesses ready to go beyond a website. We design and build custom native iOS apps — booking systems, loyalty programs, customer portals — and handle the full App Store submission.',
-    features: ['Native Swift & SwiftUI development', 'App Store submission & approval', 'Booking, loyalty & portal apps', 'Ongoing updates & maintenance'],
+    description: 'For businesses ready to go beyond a standard website. We build tailored web applications and native iOS apps designed to streamline your business workflow and engage your customers directly.',
+    features: ['Custom client portals and dashboards', 'Advanced business workflow automation', 'Native iOS development and App Store publishing'],
     badge: 'By Inquiry',
     premium: true,
   },

@@ -5,38 +5,38 @@ const advantages = [
   {
     number: '01',
     title: 'Performance & Speed',
-    diyCatch: 'Wix and Squarespace load thousands of lines of generic, bloated code on every single page just to render simple layouts. This drastically slows down performance.',
-    advantage: "We write clean code using modern Next.js architecture. Your pages load in under 2 seconds, passing Google's strict Core Web Vitals tests to maximize your organic search rankings.",
+    diyCatch: 'Bloated templates that slow down your site and hurt your Google rankings.',
+    advantage: 'Clean Next.js code. Pages load in under 2 seconds, fully optimized to rank.',
   },
   {
     number: '02',
-    title: 'Real Photography. Not Stock Photos.',
-    diyCatch: "You either have to rely on generic stock photos of people who don't work for you in spaces that aren't yours, or try to shoot on a phone. That builds zero trust with local customers.",
-    advantage: "We don't outsource. Our founder, Dan—the professional eye behind DanXFoto—brings a high-resolution Sony A7RV to your location to capture your team, your space, and your work. By blending top-tier in-house imagery with advanced web development, your site looks exactly like your business, not a template shared by 10,000 others.",
+    title: 'Authentic Visuals',
+    diyCatch: "Relying on generic stock photos of people and places that aren't yours.",
+    advantage: 'High-resolution on-site photography of your real team, space, and work.',
   },
   {
     number: '03',
-    title: 'True Digital Ownership',
-    diyCatch: 'If you stop paying your monthly subscription to Wix or Squarespace, your website is gone forever. You are locked into their platforms and cannot move your site elsewhere.',
-    advantage: "You aren't renting a template; you own your visual and digital assets completely. No lock-in, no hostage situations.",
+    title: 'True Asset Ownership',
+    diyCatch: 'You rent your site. If you stop paying your monthly subscription, it is gone forever.',
+    advantage: 'You own the code and visual assets completely. No platform lock-in.',
   },
   {
     number: '04',
-    title: 'Secure by Architecture',
-    diyCatch: 'Traditional platforms use server-side databases. Because these databases process requests in real-time, they are constant targets for malicious bots, spam, and automated hacking scripts.',
-    advantage: 'We use a modern, database-free architecture. By pre-rendering your site into secure, high-speed files that live on a global network, we eliminate the primary entry point for hackers. You get enterprise-grade security out of the box.',
+    title: 'Built-In Security',
+    diyCatch: 'Traditional databases that process requests in real-time are constant targets for malicious bots.',
+    advantage: 'A modern database-free architecture that eliminates the primary entry points for hackers.',
   },
   {
     number: '05',
-    title: 'Accessibility & Legal Compliance',
-    diyCatch: 'Drag-and-drop builders on Wix and Squarespace make it incredibly easy to accidentally create poor color contrast, incorrect heading structures, or broken screen-reader navigation.',
-    advantage: "We build with semantic HTML and strict accessibility standards from day one, minimizing your business's legal risks and ensuring a great user experience for everyone.",
+    title: 'Compliance & UX',
+    diyCatch: 'Drag-and-drop tools make it incredibly easy to break screen-reader navigation and color contrast rules.',
+    advantage: 'Built to strict semantic HTML and accessibility standards from day one.',
   },
   {
     number: '06',
-    title: 'Time Saved',
-    diyCatch: 'Building a site yourself takes dozens of hours away from running your actual business, only to end up with a site that looks DIY.',
-    advantage: 'You stay focused on running your business. We handle the technical heavy lifting, design, and photography to deliver a polished, high-performance asset in a fraction of the time.',
+    title: 'Focus on Your Business',
+    diyCatch: 'Dozens of hours spent fighting a template, only to end up with a site that looks DIY.',
+    advantage: 'You stay focused on running your business while we handle the heavy lifting.',
   },
 ]
 
@@ -109,18 +109,11 @@ export default function Difference() {
             We deliver a <em style={{ color: '#b07d62' }}>business asset.</em>
           </h2>
           <p style={{
-            fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 300,
-            color: '#7a6b61', lineHeight: 1.9, marginBottom: '20px',
+            fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 500,
+            color: '#5a4f47', lineHeight: 1.9,
             width: '100%',
           }}>
-            Wix and Squarespace are excellent $25/month tools. But by the time you factor in your own time spent fighting with templates, the limitations of generic stock photography, slower load speeds, and the local SEO gap, those DIY sites cost far more in missed opportunities and lost clients than they save.
-          </p>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif', fontSize: '16px',
-            fontWeight: 300, color: '#7a6b61', lineHeight: 1.9,
-            width: '100%',
-          }}>
-            Unlike platforms that keep your site locked down, our clients have full use and true ownership of their code and visual assets.
+            Wix and Squarespace are great $25/month tools, but the hidden costs of slow speeds, generic stock photos, and time spent building it yourself end up costing your business far more in lost clients.
           </p>
         </div>
 
@@ -210,7 +203,7 @@ export default function Difference() {
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                     marginBottom: '10px',
-                  }}>The DanXFoto Studio Advantage</p>
+                  }}>Our Advantage</p>
 
                   <p style={{
                     fontFamily: 'DM Sans, sans-serif',
