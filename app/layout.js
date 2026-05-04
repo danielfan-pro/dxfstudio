@@ -2,7 +2,7 @@ import './globals.css'
 import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
-  title: 'DXF Studio — Web Design & Photography for Small Businesses',
+  title: 'DXF Studio - Web Design & Photography',
   description: 'DXF Studio combines professional web development and photography to help small businesses launch with a complete, credible online presence.',
 }
 

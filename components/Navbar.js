@@ -71,7 +71,7 @@ export default function Navbar() {
                 letterSpacing: '0.12em',
                 whiteSpace: 'nowrap',
               }}>
-                Web Design + Photography · Boston, MA
+                Web Design + Photography
               </span>
             </div>
           </div>

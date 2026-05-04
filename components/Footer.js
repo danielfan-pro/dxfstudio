@@ -67,7 +67,7 @@ export default function Footer() {
           color: '#7a6b61',
           letterSpacing: '0.05em',
         }}>
-          © {new Date().getFullYear()} DXF Studio · Boston, MA
+          © {new Date().getFullYear()} DXF Studio
         </div>
       </div>
 
