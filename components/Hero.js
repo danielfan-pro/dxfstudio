@@ -51,7 +51,9 @@ export default function Hero() {
             width: '100%',
           }}
         >
-          If People Can't Find You, <span style={{ color: '#b07d62' }}>They Move On.</span>
+          Your Business<br />
+          Deserves More<br />
+          <span style={{ color: '#b07d62' }}>Than Social Media.</span>
         </h2>
 
         <h2
@@ -65,6 +67,7 @@ export default function Hero() {
             color: '#2d2926',
             marginBottom: '28px',
             width: '100%',
+            display: 'none',
           }}
         >
           We Build the Digital Engines <span style={{ color: '#b07d62' }}>That Keep Them.</span>
@@ -82,7 +85,7 @@ export default function Hero() {
             marginBottom: '40px',
           }}
         >
-          High-performance websites, premium photography, and custom mobile apps designed for local businesses that need to build trust instantly, rank on Google, and turn search traffic into real clients.
+          Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on. We build high-performance websites paired with premium in-house photography — no templates, no outsourcing, just a completely custom digital presence that makes you look established and credible.
         </p>
 
         <div
