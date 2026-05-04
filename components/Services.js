@@ -99,7 +99,7 @@ export default function Services() {
           width: '100%',
           marginBottom: '24px',
         }}>
-          Custom Websites &amp; Professional Photography — <em style={{ color: '#b07d62' }}>All in One</em>
+          Custom Websites &amp; Professional Photography <em style={{ color: '#b07d62' }}>— All in One</em>
         </h2>
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
