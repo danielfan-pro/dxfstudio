@@ -75,10 +75,9 @@ export default function Services() {
       ref={ref}
       style={{
         padding: '120px 40px',
-        maxWidth: '1200px',
-        margin: '0 auto',
       }}
     >
+      <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
       {/* Section header */}
       <div style={{ marginBottom: '80px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
@@ -100,8 +99,7 @@ export default function Services() {
           width: '100%',
           marginBottom: '24px',
         }}>
-          Everything a small business needs to{' '}
-          <em style={{ color: '#b07d62' }}>command trust and win clients.</em>
+          Custom Websites &amp; Professional Photography — <em style={{ color: '#b07d62' }}>All in One</em>
         </h2>
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
@@ -111,7 +109,7 @@ export default function Services() {
           lineHeight: 1.9,
           width: '100%',
         }}>
-          From high-performance websites and authentic photography to launch support and ongoing care, we build the systems that help small businesses show up clearly and earn trust faster.
+          We pair advanced web development with premium in-house photography. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
         </p>
       </div>
 
@@ -267,12 +265,13 @@ export default function Services() {
       ))}
 
       <style>{`
-        @media (max-width: 767px) {
+        @media (max-width: 1100px) {
           #services .services-grid {
             grid-template-columns: 1fr !important;
           }
         }
       `}</style>
+      </div>
     </section>
   )
 }

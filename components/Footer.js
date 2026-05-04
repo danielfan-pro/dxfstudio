@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img
             src="/dxf-logo-gold.png"
-            alt="DXF Studio logo"
+            alt="DanXFoto Studio logo"
             className="footer-logo"
             style={{
               display: 'block',
@@ -67,7 +67,7 @@ export default function Footer() {
           color: '#7a6b61',
           letterSpacing: '0.05em',
         }}>
-          © {new Date().getFullYear()} DXF Studio
+          © {new Date().getFullYear()} DanXFoto Studio
         </div>
       </div>
 

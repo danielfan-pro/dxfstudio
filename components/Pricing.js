@@ -19,7 +19,7 @@ const plans = [
       'Mobile-first & Core Web Vitals optimized',
       'SEO-ready structure',
       'CMS — update your own content',
-      'Domain & hosting managed by DXF Studio',
+      'Domain & hosting managed by DanXFoto Studio',
       'SSL certificate & security monitoring',
       'Domain renewal included',
     ],
@@ -45,7 +45,7 @@ const plans = [
       'CMS — update your own content',
       'Google Business Profile setup',
       'Local SEO foundation',
-      'Domain & hosting managed by DXF Studio',
+      'Domain & hosting managed by DanXFoto Studio',
       'Domain renewal included',
     ],
     included: 'Hosting, domain renewal, SSL, minor updates',
@@ -170,7 +170,9 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div style={{
+        <div
+          className="pricing-grid"
+          style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2px',
@@ -409,7 +411,9 @@ export default function Pricing() {
           }}>
             Once your commitment period ends, you have three flexible options. We&apos;ll reach out 60 days before your year ends to walk through them together.
           </p>
-          <div style={{
+          <div
+            className="post-commitment-grid"
+            style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '2px',
@@ -461,6 +465,18 @@ export default function Pricing() {
         }}>
           Every project starts with a free consultation. iOS app development is available by inquiry. Custom quotes available for larger or multi-location projects.
         </p>
+
+        <style>{`
+          @media (max-width: 1100px) {
+            #pricing .pricing-grid {
+              grid-template-columns: 1fr !important;
+            }
+
+            #pricing .post-commitment-grid {
+              grid-template-columns: 1fr !important;
+            }
+          }
+        `}</style>
       </div>
     </section>
   )

@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <img
             src="/dxf-logo-gold.png"
-            alt="DXF Studio logo"
+            alt="DanXFoto Studio logo"
             className="brand-logo"
             style={{
               display: 'block',

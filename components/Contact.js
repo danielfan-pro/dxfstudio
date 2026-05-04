@@ -122,7 +122,7 @@ export default function Contact() {
             }}
           >
             {[
-              { label: 'Email', value: 'hello@dxfstudio.com' },
+              { label: 'Email', value: 'studio@danxfoto.com' },
               { label: 'Based in', value: 'Melrose, MA' },
               { label: 'Response time', value: 'Within 24 hours' },
             ].map(item => (

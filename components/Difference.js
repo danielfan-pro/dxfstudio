@@ -98,7 +98,7 @@ export default function Difference() {
             <span style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '13px',
               letterSpacing: '0.26em', textTransform: 'uppercase', color: '#b07d62',
-            }}>Why DXF Studio</span>
+            }}>Why DanXFoto Studio</span>
           </div>
           <h2 style={{
             fontFamily: 'Cormorant Garamond, serif',
@@ -210,7 +210,7 @@ export default function Difference() {
                     letterSpacing: '0.08em',
                     textTransform: 'uppercase',
                     marginBottom: '10px',
-                  }}>The DXF Advantage</p>
+                  }}>The DanXFoto Studio Advantage</p>
 
                   <p style={{
                     fontFamily: 'DM Sans, sans-serif',
@@ -226,7 +226,7 @@ export default function Difference() {
         </div>
 
         <style>{`
-          @media (max-width: 900px) {
+          @media (max-width: 1100px) {
             #about .advantages-grid {
               grid-template-columns: 1fr !important;
             }
