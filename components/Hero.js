@@ -38,6 +38,21 @@ export default function Hero() {
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+        <div
+          className="reveal"
+          style={{
+            fontFamily: 'DM Sans, sans-serif',
+            fontSize: '11px',
+            fontWeight: 500,
+            letterSpacing: '0.34em',
+            textTransform: 'uppercase',
+            color: '#b07d62',
+            marginBottom: '24px',
+          }}
+        >
+          Web & Photography, All In-House
+        </div>
+
         <h2
           className="reveal"
           style={{
@@ -85,7 +100,7 @@ export default function Hero() {
             marginBottom: '40px',
           }}
         >
-          Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on. We build high-performance websites paired with premium in-house photography — no templates, no outsourcing, just a completely custom digital presence that makes you look established and credible.
+          Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on. We bundle advanced web development with premium in-house photography. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
         </p>
 
         <div
@@ -98,9 +113,9 @@ export default function Hero() {
           }}
         >
           {[
-            { title: '75%', label: 'judge credibility by design' },
-            { title: 'Mobile-first', label: 'because most traffic is on phones' },
-            { title: 'Real photos', label: 'so your business looks trustworthy' },
+            { title: '1 in 4', label: 'Small businesses have no website' },
+            { title: '75%', label: 'Consumers judge credibility by design' },
+            { title: '100%', label: 'In-house. Custom development and on-site brand photography' },
           ].map((item) => (
             <div key={item.title}>
               <div style={{
