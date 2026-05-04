@@ -60,19 +60,6 @@ Follow the prompts. Vercel auto-detects Next.js.
 ### Update contact email
 In `components/Contact.js`, replace `hello@dxfstudio.com` with your real email.
 
-### Connect a real form handler
-The contact form currently simulates a send. To wire it up:
-
-**Option 1 — EmailJS** (you already use this on DanXFoto):
-```js
-import emailjs from '@emailjs/browser'
-// Replace the fake await in handleSubmit with:
-await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form, 'YOUR_PUBLIC_KEY')
-```
-
-**Option 2 — Formspree**:
-Change the form action to your Formspree endpoint.
-
 ### Update pricing
 Edit the `plans` array in `components/Pricing.js`.
 
@@ -102,7 +89,7 @@ dxfstudio/
 │   ├── Services.js       # 4-service grid
 │   ├── Difference.js     # Why DXF Studio section
 │   ├── Pricing.js        # 3-tier pricing cards
-│   ├── Contact.js        # Contact form
+│   ├── Contact.js        # Contact info section
 │   └── Footer.js         # Footer
 ├── public/               # Static assets (add your logo, favicon here)
 ├── vercel.json
@@ -118,9 +105,11 @@ dxfstudio/
 | Name | Hex |
 |------|-----|
 | Copper | `#b07d62` |
-| Cream | `#f5f0eb` |
-| Dark bg | `#1a1714` |
-| Deeper bg | `#141210` |
-| Darkest | `#0f0d0b` |
-| Muted text | `#8a7d74` |
-| Light | `#e8e0d8` |
+| Pure white | `#ffffff` |
+| Soft panel | `#fcfbf8` |
+| Warm panel | `#f7efe6` |
+| Section tint | `#faf7f2` |
+| Main text | `#2d2926` |
+| Secondary text | `#5a4f47` |
+| Muted text | `#7a6b61` |
+| Descriptor accent | `#9d8678` |
