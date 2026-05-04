@@ -104,7 +104,7 @@ export default function Hero() {
             Most customers Google your business before they call. If they see a generic template or cheap stock photos, they move on.
           </p>
           <p>
-            We pair <strong>advanced web development</strong> with <strong>premium in-house photography</strong>. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
+            We pair <strong style={{ fontWeight: 700, color: '#2d2926' }}>advanced web development</strong> with <strong style={{ fontWeight: 700, color: '#2d2926' }}>premium in-house photography</strong>. No templates, no outsourcing - just a completely custom digital presence that makes your business look established, credible, and trustworthy on day one.
           </p>
         </div>
 
