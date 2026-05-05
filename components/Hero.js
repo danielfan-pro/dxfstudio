@@ -50,7 +50,7 @@ export default function Hero() {
             marginBottom: '24px',
           }}
         >
-          Web & Photography, All In-House
+          Web + Photography, All In-House
         </div>
 
         <h2
