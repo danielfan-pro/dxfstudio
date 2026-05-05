@@ -187,7 +187,7 @@ export default function Services() {
       {services.filter(s => s.premium).map(service => (
         <div
           key={service.number}
-          className="service-card"
+          className="service-card service-premium-card"
           style={{
             background: '#fcfbf8',
             padding: '52px 48px',
@@ -268,6 +268,14 @@ export default function Services() {
         @media (max-width: 1100px) {
           #services .services-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+
+        @media (max-width: 700px) {
+          #services .service-premium-card {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+            padding: 40px 24px !important;
           }
         }
       `}</style>

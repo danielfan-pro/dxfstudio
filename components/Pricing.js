@@ -119,12 +119,23 @@ export default function Pricing() {
           }}>
             Simple, transparent <em style={{ color: copper }}>pricing</em>
           </h2>
-          <div style={{ display: 'inline-flex', border: '1px solid rgba(176,125,98,0.25)', overflow: 'hidden', flexWrap: 'wrap' }}>
+          <div
+            className="pricing-toggle"
+            style={{
+              display: 'inline-flex',
+              border: '1px solid rgba(176,125,98,0.25)',
+              overflow: 'hidden',
+              flexWrap: 'wrap',
+              width: '100%',
+              maxWidth: '720px',
+            }}
+          >
             {[
               { key: 'monthly', label: 'Pay Monthly' },
               { key: 'annual', label: 'Pay Annually — 2 Months Free' },
             ].map(opt => (
               <button
+                className="pricing-toggle-button"
                 key={opt.key}
                 onClick={() => setBilling(opt.key)}
                 style={{
@@ -136,6 +147,7 @@ export default function Pricing() {
                   padding: '10px 20px',
                   border: 'none',
                   cursor: 'pointer',
+                  flex: 1,
                   background: billing === opt.key ? copper : 'transparent',
                   color: billing === opt.key ? '#fffaf5' : muted,
                   transition: 'all 0.2s',
@@ -444,6 +456,20 @@ export default function Pricing() {
         </p>
 
         <style>{`
+          @media (max-width: 700px) {
+            #pricing .pricing-toggle {
+              display: flex !important;
+              flex-direction: column !important;
+              max-width: none !important;
+            }
+
+            #pricing .pricing-toggle-button {
+              width: 100% !important;
+              flex: none !important;
+              text-align: center !important;
+            }
+          }
+
           @media (max-width: 1100px) {
             #pricing .pricing-grid {
               grid-template-columns: 1fr !important;
