@@ -104,7 +104,20 @@ export default function Contact() {
               width: '100%',
             }}
           >
-            Based in Melrose, we partner locally with small businesses throughout Greater Boston and the North Shore. No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we&apos;re the right fit.
+            No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we&apos;re the right fit. If you&apos;re ready to share your project details, you can{' '}
+            <a
+              href="https://studio.danxfoto.com/get-started"
+              className="contact-questionnaire-link"
+              style={{
+                color: '#b07d62',
+                textDecoration: 'none',
+                borderBottom: '1px solid #b07d62',
+                transition: 'opacity 0.2s ease, border-color 0.2s ease',
+              }}
+            >
+              fill out our client questionnaire
+            </a>{' '}
+            to get started.
           </p>
 
           <div
@@ -153,6 +166,11 @@ export default function Contact() {
           </div>
 
           <style>{`
+            #contact .contact-questionnaire-link:hover {
+              opacity: 0.75;
+              border-color: rgba(176, 125, 98, 0.75);
+            }
+
             @media (max-width: 700px) {
               #contact .contact-details-grid {
                 grid-template-columns: 1fr !important;
