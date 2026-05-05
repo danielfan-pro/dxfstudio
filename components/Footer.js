@@ -29,6 +29,8 @@ export default function Footer() {
             src="/danxfoto-logo-gold.png"
             alt="DanXFoto Studio logo"
             className="footer-logo"
+            width="1980"
+            height="883"
             style={{
               display: 'block',
               height: '42px',

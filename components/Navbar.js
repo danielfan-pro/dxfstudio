@@ -1,17 +1,60 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const mobileMenuRef = useRef(null)
+  const toggleButtonRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const previouslyFocused = document.activeElement
+    const focusable = mobileMenuRef.current?.querySelectorAll('a[href], button:not([disabled])')
+    focusable?.[0]?.focus()
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false)
+        return
+      }
+
+      if (event.key !== 'Tab' || !focusable?.length) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+      if (previouslyFocused instanceof HTMLElement) {
+        previouslyFocused.focus()
+      } else {
+        toggleButtonRef.current?.focus()
+      }
+    }
+  }, [menuOpen])
 
   const links = ['Services', 'Work', 'About', 'Contact']
   const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
@@ -42,6 +85,8 @@ export default function Navbar() {
             src="/danxfoto-logo-gold.png"
             alt="DanXFoto Studio logo"
             className="brand-logo"
+            width="1980"
+            height="883"
             style={{
               display: 'block',
               height: '48px',
@@ -52,7 +97,7 @@ export default function Navbar() {
             fontFamily: 'DM Sans, sans-serif',
             fontSize: '11px',
             fontWeight: 300,
-            color: '#7a6b61',
+            color: '#5a4f47',
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
           }}>Studio</span>
@@ -70,7 +115,7 @@ export default function Navbar() {
               fontSize: '15px',
               fontStyle: 'italic',
               fontWeight: 300,
-              color: '#9d8678',
+              color: '#7a6b61',
               letterSpacing: '0.12em',
               whiteSpace: 'nowrap',
             }}>
@@ -127,8 +172,12 @@ export default function Navbar() {
 
       {/* Mobile hamburger */}
       <button
+        ref={toggleButtonRef}
         onClick={() => setMenuOpen(!menuOpen)}
         className="show-mobile"
+        aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+        aria-expanded={menuOpen}
+        aria-controls="mobile-navigation-menu"
         style={{
           background: 'none',
           border: 'none',
@@ -169,7 +218,13 @@ export default function Navbar() {
           justifyContent: 'center',
           gap: '32px',
           zIndex: 99,
-        }}>
+        }}
+        id="mobile-navigation-menu"
+        ref={mobileMenuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+        >
           {links.map(link => (
             <a
               key={link}

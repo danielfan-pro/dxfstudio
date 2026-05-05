@@ -275,7 +275,7 @@ export default function Services() {
           #services .service-premium-card {
             grid-template-columns: 1fr !important;
             gap: 32px !important;
-            padding: 40px 24px !important;
+            padding: 48px 36px !important;
           }
         }
       `}</style>

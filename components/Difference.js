@@ -30,7 +30,7 @@ const advantages = [
     number: '05',
     title: 'Compliance & UX',
     diyCatch: 'Drag-and-drop tools make it incredibly easy to break screen-reader navigation and color contrast rules.',
-    advantage: 'Built to strict semantic HTML and accessibility standards from day one.',
+    advantage: 'Built with semantic HTML and accessibility-minded best practices from day one.',
   },
   {
     number: '06',
