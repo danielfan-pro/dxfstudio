@@ -10,8 +10,6 @@ const plans = [
     upfront: '$299',
     monthly: '$79',
     annual: '$790',
-    yearTotal: '$1,247',
-    yearTotalAnnual: '$1,089',
     commitment: '12-month minimum',
     description: 'A clean, fast, professional website for businesses that need to get online the right way.',
     features: [
@@ -23,7 +21,6 @@ const plans = [
       'Domain renewal included',
       'CMS — update your own content',
     ],
-    included: 'Hosting, domain renewal, SSL, minor updates',
     cta: 'Get Started',
   },
   {
@@ -34,8 +31,6 @@ const plans = [
     upfront: '$499',
     monthly: '$79',
     annual: '$790',
-    yearTotal: '$1,447',
-    yearTotalAnnual: '$1,289',
     commitment: '12-month minimum',
     description: 'The complete package. A custom website and a professional photo shoot — launched together.',
     features: [
@@ -49,7 +44,6 @@ const plans = [
       '90-minute on-location brand photo shoot',
       '20 professionally edited high-resolution photos delivered in 2 weeks',
     ],
-    included: 'Hosting, domain renewal, SSL, minor updates',
     cta: 'Get Started',
   },
   {
@@ -77,12 +71,6 @@ const plans = [
     cta: 'Email Inquiry',
   },
 ]
-
-const postCommitment = {
-  monthToMonth: '$99/mo',
-  annual: '$990/yr',
-  buyout: '$2,000',
-}
 
 export default function Pricing() {
   const [billing, setBilling] = useState('monthly')
@@ -251,24 +239,12 @@ export default function Pricing() {
                   )}
                 </div>
 
-                <div style={{ minHeight: '24px', marginBottom: '4px' }}>
-                  {plan.yearTotal && (
-                    <div style={{
-                      fontFamily: 'DM Sans, sans-serif',
-                      fontSize: '12px',
-                      color: muted,
-                    }}>
-                      Year 1 total: <span style={{ color: lightText }}>{billing === 'annual' ? plan.yearTotalAnnual : plan.yearTotal}</span>
-                    </div>
-                  )}
-                </div>
-
                 <div style={{
                   fontFamily: 'DM Sans, sans-serif',
                   fontSize: '11px',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: plan.highlight ? copper : muted,
+                  color: copper,
                   marginBottom: '24px',
                   opacity: 0.8,
                 }}>{plan.commitment}</div>
@@ -293,7 +269,14 @@ export default function Pricing() {
                       fontFamily: 'DM Sans, sans-serif',
                       fontSize: '13px',
                       fontWeight: 300,
-                      color: lightText,
+                      color:
+                        (plan.id === 'launch' || plan.id === 'portfolio') &&
+                        (
+                          f === '90-minute on-location brand photo shoot' ||
+                          f === '20 professionally edited high-resolution photos delivered in 2 weeks'
+                        )
+                          ? copper
+                          : lightText,
                       opacity: 0.9,
                     }}>{f}</span>
                   </li>
@@ -328,21 +311,6 @@ export default function Pricing() {
                 </div>
               )}
 
-              {plan.included && (
-                <div style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '12px',
-                  fontWeight: 300,
-                  color: muted,
-                  marginBottom: '24px',
-                  lineHeight: 1.6,
-                  paddingTop: '16px',
-                  borderTop: `1px solid ${line}`,
-                }}>
-                  <span style={{ color: copper }}>Included: </span>{plan.included}
-                </div>
-              )}
-
               <a
                 href={plan.id === 'portfolio' ? 'mailto:studio@danxfoto.com?subject=Portfolio%20Buyout%20Inquiry' : '/get-started'}
                 style={{
@@ -373,77 +341,6 @@ export default function Pricing() {
           ))}
         </div>
 
-        <div style={{
-          background: softPanel,
-          border: '1px solid rgba(176,125,98,0.15)',
-          padding: '40px 48px',
-          marginBottom: '32px',
-          position: 'relative',
-        }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: `linear-gradient(to right, ${copper}, transparent)` }} />
-          <div style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            letterSpacing: '0.3em',
-            textTransform: 'uppercase',
-            color: copper,
-            marginBottom: '20px',
-          }}>After Your 12-Month Commitment</div>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '14px',
-            fontWeight: 300,
-            color: muted,
-            lineHeight: 1.9,
-            marginBottom: '28px',
-            width: '100%',
-          }}>
-            Once your commitment period ends, you have three flexible options. We&apos;ll reach out 60 days before your year ends to walk through them together.
-          </p>
-          <div
-            className="post-commitment-grid"
-            style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '2px',
-            background: 'rgba(176,125,98,0.08)',
-          }}>
-            {[
-              { label: 'Month-to-Month', price: postCommitment.monthToMonth, desc: 'Continue with no contract. Cancel anytime with 30 days notice.' },
-              { label: 'Renew Annually', price: postCommitment.annual, desc: 'Lock in another year and get 2 months free again.' },
-              { label: 'Portfolio Buyout', price: postCommitment.buyout, desc: 'Own everything outright. We transfer all code, domain, and hosting to you.' },
-            ].map(opt => (
-              <div key={opt.label} style={{ background: softPanel, padding: '28px 24px' }}>
-                <div style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '10px',
-                  fontWeight: 500,
-                  letterSpacing: '0.2em',
-                  textTransform: 'uppercase',
-                  color: muted,
-                  marginBottom: '10px',
-                }}>{opt.label}</div>
-                <div style={{
-                  fontFamily: 'Cormorant Garamond, serif',
-                  fontSize: '28px',
-                  fontWeight: 400,
-                  color: copper,
-                  marginBottom: '10px',
-                }}>{opt.price}</div>
-                <p style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '13px',
-                  fontWeight: 300,
-                  color: muted,
-                  lineHeight: 1.7,
-                }}>
-                  {opt.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <p style={{
           fontFamily: 'DM Sans, sans-serif',
           fontSize: '13px',
@@ -472,10 +369,6 @@ export default function Pricing() {
 
           @media (max-width: 1100px) {
             #pricing .pricing-grid {
-              grid-template-columns: 1fr !important;
-            }
-
-            #pricing .post-commitment-grid {
               grid-template-columns: 1fr !important;
             }
           }
