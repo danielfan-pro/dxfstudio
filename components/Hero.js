@@ -183,7 +183,7 @@ export default function Hero() {
             onMouseEnter={e => { e.currentTarget.style.borderColor = '#b07d62'; e.currentTarget.style.color = '#b07d62' }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(45,41,38,0.16)'; e.currentTarget.style.color = '#5a4f47' }}
           >
-            See Our Work
+            View Our Offerings
           </a>
         </div>
 
