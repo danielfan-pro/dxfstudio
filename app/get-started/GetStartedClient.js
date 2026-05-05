@@ -84,7 +84,7 @@ export default function GetStartedClient() {
                 lineHeight: 1.04,
                 color: '#2d2926',
                 marginBottom: '24px',
-                maxWidth: '900px',
+                width: '100%',
               }}
             >
               Tell Us About <em style={{ color: '#b07d62' }}>Your Project</em>
@@ -98,7 +98,7 @@ export default function GetStartedClient() {
                 color: '#7a6b61',
                 lineHeight: 1.9,
                 marginBottom: '40px',
-                maxWidth: '900px',
+                width: '100%',
               }}
             >
               This short questionnaire helps us understand your business, your goals, and the kind of website or photography support you need. The more context you share, the more useful our first conversation will be.

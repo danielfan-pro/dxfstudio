@@ -109,7 +109,7 @@ export default function Difference() {
             We deliver a <em style={{ color: '#b07d62' }}>business asset.</em>
           </h2>
           <p style={{
-            fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 500,
+            fontFamily: 'DM Sans, sans-serif', fontSize: '16px', fontWeight: 300,
             color: '#5a4f47', lineHeight: 1.9,
             width: '100%',
           }}>
