@@ -43,7 +43,6 @@ const plans = [
       '90-minute on-location brand photo shoot',
       '20 professionally edited high-resolution photos delivered in 2 weeks',
       'CMS — update your own content',
-      'Google Business Profile setup',
       'Local SEO foundation',
       'Domain & hosting managed by DanXFoto Studio',
       'Domain renewal included',

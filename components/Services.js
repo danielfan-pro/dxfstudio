@@ -22,7 +22,7 @@ const services = [
     number: '03',
     title: 'Launch Package',
     description: 'The ultimate all-in-one digital presence. We bundle custom web development and professional brand photography to launch your business right from day one.',
-    features: ['All-in-one website build + on-site brand photo shoot', 'Google Business Profile setup', 'Local SEO foundation', 'Hosting & maintenance plan'],
+    features: ['All-in-one website build + on-site brand photo shoot', 'Local SEO foundation', 'Hosting & maintenance plan'],
     badge: null,
     premium: false,
   },
