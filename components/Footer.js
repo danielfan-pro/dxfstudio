@@ -53,10 +53,15 @@ export default function Footer() {
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
-          {['Services', 'Work', 'About', 'Contact'].map(link => (
+          {[
+            { label: 'Services', section: 'services' },
+            { label: 'Approach', section: 'difference' },
+            { label: 'Pricing', section: 'pricing' },
+            { label: 'Contact', section: 'contact' },
+          ].map(link => (
             <a
-              key={link}
-              href={homeHref(link.toLowerCase())}
+              key={link.label}
+              href={homeHref(link.section)}
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',
@@ -69,7 +74,7 @@ export default function Footer() {
               onMouseEnter={e => e.target.style.color = '#b07d62'}
               onMouseLeave={e => e.target.style.color = '#7a6b61'}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
@@ -81,7 +86,7 @@ export default function Footer() {
           color: '#7a6b61',
           letterSpacing: '0.05em',
         }}>
-          © {new Date().getFullYear()} DanXFoto Studio
+          © {new Date().getFullYear()} DanXFoto. All rights reserved.
         </div>
       </div>
 

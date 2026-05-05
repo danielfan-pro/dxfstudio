@@ -67,7 +67,7 @@ export default function Difference() {
 
   return (
     <section
-      id="about"
+      id="difference"
       ref={ref}
       style={{
         padding: '120px 40px',
@@ -98,7 +98,7 @@ export default function Difference() {
             <span style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '13px',
               letterSpacing: '0.26em', textTransform: 'uppercase', color: '#b07d62',
-            }}>Why DanXFoto Studio</span>
+            }}>Why DanXFoto</span>
           </div>
           <h2 style={{
             fontFamily: 'Cormorant Garamond, serif',
@@ -220,15 +220,15 @@ export default function Difference() {
 
         <style>{`
           @media (max-width: 1100px) {
-            #about .advantages-grid {
+            #difference .advantages-grid {
               grid-template-columns: 1fr !important;
             }
 
-            #about .adv-split {
+            #difference .adv-split {
               grid-template-columns: 1fr !important;
             }
 
-            #about .adv-split > div:first-child {
+            #difference .adv-split > div:first-child {
               padding-right: 0 !important;
               padding-bottom: 18px !important;
               border-right: none !important;
@@ -236,7 +236,7 @@ export default function Difference() {
               margin-bottom: 18px !important;
             }
 
-            #about .adv-split > div:last-child {
+            #difference .adv-split > div:last-child {
               padding-left: 0 !important;
             }
           }

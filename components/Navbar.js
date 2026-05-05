@@ -56,7 +56,12 @@ export default function Navbar() {
     }
   }, [menuOpen])
 
-  const links = ['Services', 'Work', 'About', 'Contact']
+  const links = [
+    { label: 'Services', section: 'services' },
+    { label: 'Approach', section: 'difference' },
+    { label: 'Pricing', section: 'pricing' },
+    { label: 'Contact', section: 'contact' },
+  ]
   const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
   const rootHref = pathname === '/' ? '#' : '/'
 
@@ -130,8 +135,8 @@ export default function Navbar() {
            className="hidden-mobile">
         {links.map(link => (
           <a
-            key={link}
-            href={homeHref(link.toLowerCase())}
+            key={link.label}
+            href={homeHref(link.section)}
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: '12px',
@@ -146,7 +151,7 @@ export default function Navbar() {
             onMouseEnter={e => { e.target.style.opacity = 1; e.target.style.color = '#b07d62' }}
             onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#5a4f47' }}
           >
-            {link}
+            {link.label}
           </a>
         ))}
         <a
@@ -227,8 +232,8 @@ export default function Navbar() {
         >
           {links.map(link => (
             <a
-              key={link}
-              href={homeHref(link.toLowerCase())}
+              key={link.label}
+              href={homeHref(link.section)}
               onClick={() => setMenuOpen(false)}
               style={{
                 fontFamily: 'Cormorant Garamond, serif',
@@ -239,7 +244,7 @@ export default function Navbar() {
                 letterSpacing: '0.05em',
               }}
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
