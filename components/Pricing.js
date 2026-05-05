@@ -80,7 +80,7 @@ const plans = [
 const postCommitment = {
   monthToMonth: '$99/mo',
   annual: '$990/yr',
-  buyout: '$800',
+  buyout: '$2,000',
 }
 
 export default function Pricing() {
