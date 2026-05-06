@@ -84,131 +84,145 @@ export default function Navbar() {
         transition: 'all 0.4s ease',
       }}
     >
-      {/* Logo */}
-      <a href={rootHref} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
-        <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <img
-            src="/danxfoto-logo-gold.png"
-            alt="DanXFoto Studio logo"
-            className="brand-logo"
-            width="1980"
-            height="883"
-            style={{
-              display: 'block',
-              height: '48px',
-              width: 'auto',
-            }}
-          />
-          <span className="brand-studio" style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            fontWeight: 300,
-            color: '#5a4f47',
-            letterSpacing: '0.25em',
-            textTransform: 'uppercase',
-          }}>Studio</span>
-          <div
-            className="brand-descriptor"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-            }}
-          >
-            <div className="brand-divider" style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
-            <span className="brand-descriptor-text" style={{
-              fontFamily: 'Cormorant Garamond, serif',
-              fontSize: '15px',
-              fontStyle: 'italic',
-              fontWeight: 300,
-              color: '#7a6b61',
-              letterSpacing: '0.12em',
-              whiteSpace: 'nowrap',
-            }}>
-              Web Design + Photography
-            </span>
-          </div>
-        </div>
-      </a>
-
-      {/* Desktop links */}
-      <div style={{ display: 'flex', gap: '40px', alignItems: 'center' }}
-           className="hidden-mobile">
-        {links.map(link => (
-          <a
-            key={link.label}
-            href={homeHref(link.section)}
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '12px',
-              fontWeight: 400,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#5a4f47',
-              textDecoration: 'none',
-              opacity: 0.7,
-              transition: 'opacity 0.2s, color 0.2s',
-            }}
-            onMouseEnter={e => { e.target.style.opacity = 1; e.target.style.color = '#b07d62' }}
-            onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#5a4f47' }}
-          >
-            {link.label}
-          </a>
-        ))}
-        <a
-          href="/get-started"
-          style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '11px',
-            fontWeight: 500,
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: '#fffaf5',
-            background: '#b07d62',
-            padding: '10px 22px',
-            textDecoration: 'none',
-            transition: 'background 0.2s',
-          }}
-          onMouseEnter={e => e.target.style.background = '#c49070'}
-          onMouseLeave={e => e.target.style.background = '#b07d62'}
-        >
-          Get Started
-        </a>
-      </div>
-
-      {/* Mobile hamburger */}
-      <button
-        ref={toggleButtonRef}
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="show-mobile"
-        aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-        aria-expanded={menuOpen}
-        aria-controls="mobile-navigation-menu"
+      <div
+        className="nav-inner"
         style={{
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
+          maxWidth: '1200px',
+          width: '100%',
+          margin: '0 auto',
           display: 'flex',
-          flexDirection: 'column',
-          gap: '5px',
-          padding: '4px',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '24px',
         }}
       >
-        {[0,1,2].map(i => (
-          <span key={i} style={{
-            display: 'block',
-            width: '24px',
-            height: '1px',
-            background: '#5a4f47',
-            transition: 'all 0.3s',
-            transform: menuOpen
-              ? i === 0 ? 'rotate(45deg) translate(4px, 4px)'
-              : i === 1 ? 'scaleX(0)'
-              : 'rotate(-45deg) translate(4px, -4px)'
-              : 'none',
-          }} />
-        ))}
-      </button>
+        {/* Logo */}
+        <a href={rootHref} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+          <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <img
+              src="/danxfoto-logo-gold.png"
+              alt="DanXFoto Studio logo"
+              className="brand-logo"
+              width="1980"
+              height="883"
+              style={{
+                display: 'block',
+                height: '48px',
+                width: 'auto',
+              }}
+            />
+            <span className="brand-studio" style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 300,
+              color: '#5a4f47',
+              letterSpacing: '0.25em',
+              textTransform: 'uppercase',
+            }}>Studio</span>
+            <div
+              className="brand-descriptor"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+              }}
+            >
+              <div className="brand-divider" style={{ width: '1px', height: '24px', background: 'rgba(176,125,98,0.18)' }} />
+              <span className="brand-descriptor-text" style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                fontSize: '15px',
+                fontStyle: 'italic',
+                fontWeight: 300,
+                color: '#7a6b61',
+                letterSpacing: '0.12em',
+                whiteSpace: 'nowrap',
+              }}>
+                Web Design + Photography
+              </span>
+            </div>
+          </div>
+        </a>
+
+        {/* Desktop links */}
+        <div style={{ display: 'flex', gap: '40px', alignItems: 'center' }}
+             className="hidden-mobile">
+          {links.map(link => (
+            <a
+              key={link.label}
+              href={homeHref(link.section)}
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '12px',
+                fontWeight: 400,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#5a4f47',
+                textDecoration: 'none',
+                opacity: 0.7,
+                transition: 'opacity 0.2s, color 0.2s',
+              }}
+              onMouseEnter={e => { e.target.style.opacity = 1; e.target.style.color = '#b07d62' }}
+              onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#5a4f47' }}
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="/get-started"
+            style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 500,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#fffaf5',
+              background: '#b07d62',
+              padding: '10px 22px',
+              textDecoration: 'none',
+              transition: 'background 0.2s',
+            }}
+            onMouseEnter={e => e.target.style.background = '#c49070'}
+            onMouseLeave={e => e.target.style.background = '#b07d62'}
+          >
+            Get Started
+          </a>
+        </div>
+
+        {/* Mobile hamburger */}
+        <button
+          ref={toggleButtonRef}
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="show-mobile"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation-menu"
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '5px',
+            padding: '4px',
+            flexShrink: 0,
+          }}
+        >
+          {[0,1,2].map(i => (
+            <span key={i} style={{
+              display: 'block',
+              width: '24px',
+              height: '1px',
+              background: '#5a4f47',
+              transition: 'all 0.3s',
+              transform: menuOpen
+                ? i === 0 ? 'rotate(45deg) translate(4px, 4px)'
+                : i === 1 ? 'scaleX(0)'
+                : 'rotate(-45deg) translate(4px, -4px)'
+                : 'none',
+            }} />
+          ))}
+        </button>
+      </div>
 
       <style>{`
         @media (min-width: 1101px) {
@@ -220,6 +234,9 @@ export default function Navbar() {
           nav {
             padding-left: 20px !important;
             padding-right: 20px !important;
+          }
+          .nav-inner {
+            gap: 16px !important;
           }
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
@@ -241,6 +258,9 @@ export default function Navbar() {
           nav {
             padding-left: 20px !important;
             padding-right: 20px !important;
+          }
+          .nav-inner {
+            gap: 12px !important;
           }
           .brand-lockup { gap: 8px !important; }
           .brand-logo { height: 34px !important; }
