@@ -157,7 +157,11 @@ export default function Hero() {
               background: '#b07d62',
               padding: '16px 36px',
               textDecoration: 'none',
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flex: '1 1 260px',
+              minWidth: '260px',
               transition: 'background 0.2s, transform 0.2s',
             }}
             onMouseEnter={e => { e.currentTarget.style.background = '#c49070'; e.currentTarget.style.transform = 'translateY(-2px)' }}
@@ -177,7 +181,11 @@ export default function Hero() {
               border: '1px solid rgba(45,41,38,0.16)',
               padding: '16px 36px',
               textDecoration: 'none',
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flex: '1 1 260px',
+              minWidth: '260px',
               transition: 'border-color 0.2s, color 0.2s',
             }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = '#b07d62'; e.currentTarget.style.color = '#b07d62' }}
