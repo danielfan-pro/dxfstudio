@@ -20,7 +20,10 @@ export default function Navbar() {
 
     const previouslyFocused = document.activeElement
     const focusable = mobileMenuRef.current?.querySelectorAll('a[href], button:not([disabled])')
-    focusable?.[0]?.focus()
+    const firstMenuLink = mobileMenuRef.current?.querySelector('.mobile-menu-link')
+    requestAnimationFrame(() => {
+      firstMenuLink?.focus()
+    })
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -97,7 +100,7 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <a href={rootHref} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+        <a href={rootHref} className="brand-link" style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
           <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <img
               src="/danxfoto-logo-gold.png"
@@ -276,6 +279,22 @@ export default function Navbar() {
             white-space: nowrap !important;
           }
         }
+        .brand-link {
+          -webkit-tap-highlight-color: transparent;
+        }
+        .brand-link:focus-visible {
+          outline: none !important;
+        }
+        .mobile-menu-link {
+          padding: 4px 12px;
+          border-radius: 999px;
+          transition: color 0.2s ease, background 0.2s ease;
+        }
+        .mobile-menu-link:focus-visible {
+          outline: none !important;
+          color: #b07d62 !important;
+          background: rgba(176,125,98,0.08) !important;
+        }
       `}</style>
     </nav>
     {menuOpen && (
@@ -305,7 +324,7 @@ export default function Navbar() {
             flexShrink: 0,
           }}
         >
-          <a href={rootHref} onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+          <a href={rootHref} className="brand-link" onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
             <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <img
                 src="/danxfoto-logo-gold.png"
@@ -394,6 +413,7 @@ export default function Navbar() {
               key={link.label}
               href={homeHref(link.section)}
               onClick={() => setMenuOpen(false)}
+              className="mobile-menu-link"
               style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontSize: '36px',
