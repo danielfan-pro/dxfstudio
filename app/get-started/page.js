@@ -9,9 +9,9 @@ export const metadata = {
     url: '/get-started',
     images: [
       {
-        url: '/danxfoto-logo-gold-google.png',
+        url: '/danxfoto-og.png',
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: 'DanXFoto Studio logo',
       },
     ],
@@ -19,7 +19,7 @@ export const metadata = {
   twitter: {
     title: 'Get Started - DanXFoto Studio',
     description: 'Share your business goals, website needs, and photography priorities so we can prepare a focused first conversation.',
-    images: ['/danxfoto-logo-gold-google.png'],
+    images: ['/danxfoto-og.png'],
   },
 }
 

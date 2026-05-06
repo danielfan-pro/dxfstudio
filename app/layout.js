@@ -6,7 +6,7 @@ const localBusinessSchema = {
   '@type': 'ProfessionalService',
   name: 'DanXFoto Studio',
   url: 'https://studio.danxfoto.com',
-  image: 'https://studio.danxfoto.com/danxfoto-logo-gold-google.png',
+  image: 'https://studio.danxfoto.com/danxfoto-og.png',
   description:
     'DanXFoto Studio builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
   areaServed: [
@@ -49,9 +49,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/danxfoto-logo-gold-google.png',
+        url: '/danxfoto-og.png',
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: 'DanXFoto Studio logo',
       },
     ],
@@ -60,7 +60,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'DanXFoto Studio - Web Design & Photography',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
-    images: ['/danxfoto-logo-gold-google.png'],
+    images: ['/danxfoto-og.png'],
   },
   icons: {
     icon: '/icon.png',
