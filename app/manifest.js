@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'DanXFoto Studio',
-    short_name: 'DanXFoto Studio',
+    name: 'DanXFoto',
+    short_name: 'DanXFoto',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
     start_url: '/',
     display: 'standalone',

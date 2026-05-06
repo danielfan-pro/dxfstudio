@@ -4,11 +4,11 @@ import { Analytics } from '@vercel/analytics/next'
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'DanXFoto Studio',
+  name: 'DanXFoto',
   url: 'https://studio.danxfoto.com',
   image: 'https://studio.danxfoto.com/danxfoto-og.png',
   description:
-    'DanXFoto Studio builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+    'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
   areaServed: [
     {
       '@type': 'City',
@@ -36,15 +36,15 @@ const localBusinessSchema = {
 export const metadata = {
   metadataBase: new URL('https://studio.danxfoto.com'),
   title: {
-    default: 'DanXFoto Studio - Web Design & Photography',
-    template: '%s | DanXFoto Studio',
+    default: 'DanXFoto - Web Design & Photography',
+    template: '%s | DanXFoto',
   },
-  description: 'DanXFoto Studio builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+  description: 'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
   openGraph: {
-    title: 'DanXFoto Studio - Web Design & Photography',
+    title: 'DanXFoto - Web Design & Photography',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
     url: '/',
-    siteName: 'DanXFoto Studio',
+    siteName: 'DanXFoto',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -52,13 +52,13 @@ export const metadata = {
         url: '/danxfoto-og.png',
         width: 1200,
         height: 630,
-        alt: 'DanXFoto Studio logo',
+        alt: 'DanXFoto logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DanXFoto Studio - Web Design & Photography',
+    title: 'DanXFoto - Web Design & Photography',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
     images: ['/danxfoto-og.png'],
   },

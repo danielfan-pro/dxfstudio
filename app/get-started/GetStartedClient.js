@@ -120,7 +120,7 @@ export default function GetStartedClient() {
                 frameBorder="0"
                 marginHeight="0"
                 marginWidth="0"
-                title="DanXFoto Studio | New Project Questionnaire"
+                title="DanXFoto | New Project Questionnaire"
                 style={{ display: 'block', width: '100%', border: 'none', background: 'transparent' }}
               />
             </div>

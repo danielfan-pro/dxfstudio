@@ -59,14 +59,15 @@ export default function Navbar() {
     }
   }, [menuOpen])
 
-  const links = [
-    { label: 'Services', section: 'services' },
-    { label: 'Approach', section: 'difference' },
-    { label: 'Pricing', section: 'pricing' },
-    { label: 'Contact', section: 'contact' },
-  ]
   const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
   const rootHref = pathname === '/' ? '#' : '/'
+  const links = [
+    { label: 'Services', href: homeHref('services') },
+    { label: 'Approach', href: homeHref('difference') },
+    { label: 'Pricing', href: homeHref('pricing') },
+    { label: 'Photography', href: '/photography' },
+    { label: 'Contact', href: homeHref('contact') },
+  ]
 
   return (
     <>
@@ -104,7 +105,7 @@ export default function Navbar() {
           <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <img
               src="/danxfoto-logo-gold.png"
-              alt="DanXFoto Studio logo"
+              alt="DanXFoto logo"
               className="brand-logo"
               width="1980"
               height="883"
@@ -114,14 +115,6 @@ export default function Navbar() {
                 width: 'auto',
               }}
             />
-            <span className="brand-studio" style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '11px',
-              fontWeight: 300,
-              color: '#5a4f47',
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-            }}>Studio</span>
             <div
               className="brand-descriptor"
               style={{
@@ -152,20 +145,23 @@ export default function Navbar() {
           {links.map(link => (
             <a
               key={link.label}
-              href={homeHref(link.section)}
+              href={link.href}
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '12px',
                 fontWeight: 400,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#5a4f47',
+                color: pathname === '/photography' && link.label === 'Photography' ? '#b07d62' : '#5a4f47',
                 textDecoration: 'none',
-                opacity: 0.7,
+                opacity: pathname === '/photography' && link.label === 'Photography' ? 1 : 0.7,
                 transition: 'opacity 0.2s, color 0.2s',
               }}
               onMouseEnter={e => { e.target.style.opacity = 1; e.target.style.color = '#b07d62' }}
-              onMouseLeave={e => { e.target.style.opacity = 0.7; e.target.style.color = '#5a4f47' }}
+              onMouseLeave={e => {
+                e.target.style.opacity = pathname === '/photography' && link.label === 'Photography' ? 1 : 0.7
+                e.target.style.color = pathname === '/photography' && link.label === 'Photography' ? '#b07d62' : '#5a4f47'
+              }}
             >
               {link.label}
             </a>
@@ -245,10 +241,6 @@ export default function Navbar() {
           .show-mobile { display: flex !important; }
           .brand-lockup { gap: 10px !important; }
           .brand-logo { height: 38px !important; }
-          .brand-studio {
-            font-size: 10px !important;
-            letter-spacing: 0.22em !important;
-          }
           .brand-descriptor { display: flex !important; gap: 8px !important; }
           .brand-divider { height: 18px !important; }
           .brand-descriptor-text {
@@ -328,7 +320,7 @@ export default function Navbar() {
             <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <img
                 src="/danxfoto-logo-gold.png"
-                alt="DanXFoto Studio logo"
+                alt="DanXFoto logo"
                 className="brand-logo"
                 width="1980"
                 height="883"
@@ -338,14 +330,6 @@ export default function Navbar() {
                   width: 'auto',
                 }}
               />
-              <span className="brand-studio" style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '9px',
-                fontWeight: 300,
-                color: '#5a4f47',
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-              }}>Studio</span>
               <div className="brand-descriptor" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <div className="brand-divider" style={{ width: '1px', height: '18px', background: 'rgba(176,125,98,0.18)' }} />
                 <span className="brand-descriptor-text" style={{
@@ -411,7 +395,7 @@ export default function Navbar() {
           {links.map(link => (
             <a
               key={link.label}
-              href={homeHref(link.section)}
+              href={link.href}
               onClick={() => setMenuOpen(false)}
               className="mobile-menu-link"
               style={{

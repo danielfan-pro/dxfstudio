@@ -41,6 +41,18 @@ const services = [
     features: ['Custom client portals and dashboards', 'Advanced business workflow automation', 'Native iOS development and App Store publishing'],
     badge: 'By Inquiry',
     premium: true,
+    ctaLabel: 'Inquire about an iOS project',
+    ctaHref: 'mailto:studio@danxfoto.com?subject=iOS%20Project%20Inquiry',
+  },
+  {
+    number: '06',
+    title: 'Family & Portrait Photography',
+    description: 'Authentic, relaxed portrait sessions for families, couples, and individuals. Whether you need updated headshots or want to capture your family at this moment in time, we bring the same attention to light, composition, and detail that we bring to every brand shoot.',
+    features: ['Family portrait sessions', 'Individual headshots & personal branding', 'Outdoor & studio-style locations'],
+    badge: null,
+    premium: true,
+    ctaLabel: 'View Portfolio & Book',
+    ctaHref: '/photography',
   },
 ]
 
@@ -183,41 +195,45 @@ export default function Services() {
         ))}
       </div>
 
-      {/* iOS — premium full-width card */}
-      {services.filter(s => s.premium).map(service => (
-        <div
-          key={service.number}
-          className="service-card service-premium-card"
-          style={{
-            background: '#fcfbf8',
-            padding: '52px 48px',
-            opacity: 0,
-            transform: 'translateY(24px)',
-            transition: 'opacity 0.6s ease, transform 0.6s ease, background 0.3s ease',
-            cursor: 'default',
-            position: 'relative',
-            borderLeft: '2px solid #b07d62',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-            gap: '48px',
-            alignItems: 'center',
-          }}
-          onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
-          onMouseLeave={e => e.currentTarget.style.background = '#fcfbf8'}
-        >
-          {/* Left */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
+      <div
+        className="services-grid services-grid-premium"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+          gap: '2px',
+          background: 'rgba(176,125,98,0.10)',
+          marginTop: '2px',
+        }}
+      >
+        {services.filter(s => s.premium).map(service => (
+          <div
+            key={service.number}
+            className="service-card"
+            style={{
+              background: '#fcfbf8',
+              padding: '48px 36px',
+              opacity: 0,
+              transform: 'translateY(24px)',
+              transition: 'opacity 0.6s ease, transform 0.6s ease, background 0.3s ease',
+              cursor: 'default',
+              position: 'relative',
+            }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f6ece2'}
+            onMouseLeave={e => e.currentTarget.style.background = '#fcfbf8'}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}>
               <div style={{
                 fontFamily: 'Cormorant Garamond, serif', fontSize: '13px',
                 color: '#b07d62', letterSpacing: '0.2em',
               }}>{service.number}</div>
-              <div style={{
-                fontFamily: 'DM Sans, sans-serif', fontSize: '10px',
-                fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase',
-                color: '#b07d62', border: '1px solid rgba(176,125,98,0.3)',
-                padding: '4px 10px',
-              }}>{service.badge}</div>
+              {service.badge && (
+                <div style={{
+                  fontFamily: 'DM Sans, sans-serif', fontSize: '10px',
+                  fontWeight: 500, letterSpacing: '0.2em', textTransform: 'uppercase',
+                  color: '#b07d62', border: '1px solid rgba(176,125,98,0.3)',
+                  padding: '4px 10px',
+                }}>{service.badge}</div>
+              )}
             </div>
             <h3 style={{
               fontFamily: 'Cormorant Garamond, serif', fontSize: '32px',
@@ -226,16 +242,8 @@ export default function Services() {
             <div style={{ width: '30px', height: '1px', background: '#b07d62', marginBottom: '20px' }} />
             <p style={{
               fontFamily: 'DM Sans, sans-serif', fontSize: '15px', fontWeight: 300,
-              color: '#7a6b61', lineHeight: 1.9,
+              color: '#7a6b61', lineHeight: 1.9, marginBottom: '28px',
             }}>{service.description}</p>
-          </div>
-
-          {/* Right */}
-          <div>
-            <div style={{
-              fontFamily: 'DM Sans, sans-serif', fontSize: '11px', letterSpacing: '0.2em',
-              textTransform: 'uppercase', color: '#7a6b61', marginBottom: '20px',
-            }}>What's included</div>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '36px' }}>
               {service.features.map(f => (
                 <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -248,7 +256,7 @@ export default function Services() {
               ))}
             </ul>
             <a
-              href="mailto:studio@danxfoto.com?subject=iOS%20Project%20Inquiry"
+              href={service.ctaHref}
               style={{
                 fontFamily: 'DM Sans, sans-serif', fontSize: '12px', fontWeight: 500,
                 letterSpacing: '0.2em', textTransform: 'uppercase',
@@ -257,25 +265,18 @@ export default function Services() {
                 borderBottom: '1px solid rgba(176,125,98,0.3)', paddingBottom: '6px',
               }}
             >
-              Inquire about an iOS project
+              {service.ctaLabel}
               <span style={{ fontSize: '16px' }}>→</span>
             </a>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <style>{`
         @media (max-width: 1100px) {
-          #services .services-grid {
+          #services .services-grid,
+          #services .services-grid-premium {
             grid-template-columns: 1fr !important;
-          }
-        }
-
-        @media (max-width: 700px) {
-          #services .service-premium-card {
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
-            padding: 48px 36px !important;
           }
         }
       `}</style>

@@ -5,6 +5,13 @@ import { usePathname } from 'next/navigation'
 export default function Footer() {
   const pathname = usePathname()
   const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
+  const links = [
+    { label: 'Services', href: homeHref('services') },
+    { label: 'Approach', href: homeHref('difference') },
+    { label: 'Pricing', href: homeHref('pricing') },
+    { label: 'Photography', href: '/photography' },
+    { label: 'Contact', href: homeHref('contact') },
+  ]
 
   return (
     <footer style={{
@@ -27,7 +34,7 @@ export default function Footer() {
         <div className="footer-brand" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img
             src="/danxfoto-logo-gold.png"
-            alt="DanXFoto Studio logo"
+            alt="DanXFoto logo"
             className="footer-logo"
             width="1980"
             height="883"
@@ -37,42 +44,26 @@ export default function Footer() {
               width: 'auto',
             }}
           />
-          <span
-            className="footer-studio"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '11px',
-              fontWeight: 300,
-              color: '#7a6b61',
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Studio
-          </span>
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
-          {[
-            { label: 'Services', section: 'services' },
-            { label: 'Approach', section: 'difference' },
-            { label: 'Pricing', section: 'pricing' },
-            { label: 'Contact', section: 'contact' },
-          ].map(link => (
+          {links.map(link => (
             <a
               key={link.label}
-              href={homeHref(link.section)}
+              href={link.href}
               style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '11px',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#7a6b61',
+                color: pathname === '/photography' && link.label === 'Photography' ? '#b07d62' : '#7a6b61',
                 textDecoration: 'none',
                 transition: 'color 0.2s',
               }}
               onMouseEnter={e => e.target.style.color = '#b07d62'}
-              onMouseLeave={e => e.target.style.color = '#7a6b61'}
+              onMouseLeave={e => {
+                e.target.style.color = pathname === '/photography' && link.label === 'Photography' ? '#b07d62' : '#7a6b61'
+              }}
             >
               {link.label}
             </a>
@@ -101,10 +92,6 @@ export default function Footer() {
           }
           .footer-brand {
             justify-content: center !important;
-          }
-          .footer-studio {
-            font-size: 10px !important;
-            letter-spacing: 0.22em !important;
           }
           .footer-links {
             justify-content: center !important;
