@@ -66,6 +66,7 @@ export default function Navbar() {
   const rootHref = pathname === '/' ? '#' : '/'
 
   return (
+    <>
     <nav
       style={{
         position: 'fixed',
@@ -209,139 +210,6 @@ export default function Navbar() {
         ))}
       </button>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'rgba(255,255,255,0.995)',
-            backdropFilter: 'blur(14px)',
-            display: 'flex',
-            flexDirection: 'column',
-            zIndex: 200,
-          }}
-          id="mobile-navigation-menu"
-          ref={mobileMenuRef}
-          role="dialog"
-          aria-modal="true"
-          aria-label="Mobile navigation"
-        >
-          <div
-            style={{
-              padding: '28px 20px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              borderBottom: '1px solid rgba(176,125,98,0.12)',
-              flexShrink: 0,
-            }}
-          >
-            <a href={rootHref} onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
-              <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <img
-                  src="/danxfoto-logo-gold.png"
-                  alt="DanXFoto Studio logo"
-                  className="brand-logo"
-                  width="1980"
-                  height="883"
-                  style={{
-                    display: 'block',
-                    height: '34px',
-                    width: 'auto',
-                  }}
-                />
-                <span className="brand-studio" style={{
-                  fontFamily: 'DM Sans, sans-serif',
-                  fontSize: '9px',
-                  fontWeight: 300,
-                  color: '#5a4f47',
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                }}>Studio</span>
-                <div className="brand-descriptor" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div className="brand-divider" style={{ width: '1px', height: '18px', background: 'rgba(176,125,98,0.18)' }} />
-                  <span className="brand-descriptor-text" style={{
-                    fontFamily: 'Cormorant Garamond, serif',
-                    fontSize: '10px',
-                    fontStyle: 'italic',
-                    fontWeight: 300,
-                    color: '#7a6b61',
-                    letterSpacing: '0.06em',
-                    whiteSpace: 'nowrap',
-                  }}>
-                    Web Design + Photography
-                  </span>
-                </div>
-              </div>
-            </a>
-
-            <button
-              onClick={() => setMenuOpen(false)}
-              aria-label="Close navigation menu"
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                width: '32px',
-                height: '32px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative',
-                flexShrink: 0,
-              }}
-            >
-              <span style={{
-                position: 'absolute',
-                width: '24px',
-                height: '1px',
-                background: '#5a4f47',
-                transform: 'rotate(45deg)',
-              }} />
-              <span style={{
-                position: 'absolute',
-                width: '24px',
-                height: '1px',
-                background: '#5a4f47',
-                transform: 'rotate(-45deg)',
-              }} />
-            </button>
-          </div>
-
-          <div
-            style={{
-              flex: 1,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '56px',
-              padding: '40px 20px 56px',
-              overflowY: 'auto',
-            }}
-          >
-            {links.map(link => (
-              <a
-                key={link.label}
-                href={homeHref(link.section)}
-                onClick={() => setMenuOpen(false)}
-                style={{
-                  fontFamily: 'Cormorant Garamond, serif',
-                  fontSize: '36px',
-                  fontWeight: 300,
-                  color: '#5a4f47',
-                  textDecoration: 'none',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-
       <style>{`
         @media (min-width: 1101px) {
           .hidden-mobile { display: flex !important; }
@@ -390,5 +258,137 @@ export default function Navbar() {
         }
       `}</style>
     </nav>
+    {menuOpen && (
+      <div
+        style={{
+          position: 'fixed',
+          inset: 0,
+          background: 'rgba(255,255,255,0.995)',
+          backdropFilter: 'blur(14px)',
+          display: 'flex',
+          flexDirection: 'column',
+          zIndex: 200,
+        }}
+        id="mobile-navigation-menu"
+        ref={mobileMenuRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+      >
+        <div
+          style={{
+            padding: '28px 20px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            borderBottom: '1px solid rgba(176,125,98,0.12)',
+            flexShrink: 0,
+          }}
+        >
+          <a href={rootHref} onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none', maxWidth: 'calc(100% - 56px)' }}>
+            <div className="brand-lockup" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <img
+                src="/danxfoto-logo-gold.png"
+                alt="DanXFoto Studio logo"
+                className="brand-logo"
+                width="1980"
+                height="883"
+                style={{
+                  display: 'block',
+                  height: '34px',
+                  width: 'auto',
+                }}
+              />
+              <span className="brand-studio" style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '9px',
+                fontWeight: 300,
+                color: '#5a4f47',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+              }}>Studio</span>
+              <div className="brand-descriptor" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div className="brand-divider" style={{ width: '1px', height: '18px', background: 'rgba(176,125,98,0.18)' }} />
+                <span className="brand-descriptor-text" style={{
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontSize: '10px',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  color: '#7a6b61',
+                  letterSpacing: '0.06em',
+                  whiteSpace: 'nowrap',
+                }}>
+                  Web Design + Photography
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close navigation menu"
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              width: '32px',
+              height: '32px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              flexShrink: 0,
+            }}
+          >
+            <span style={{
+              position: 'absolute',
+              width: '24px',
+              height: '1px',
+              background: '#5a4f47',
+              transform: 'rotate(45deg)',
+            }} />
+            <span style={{
+              position: 'absolute',
+              width: '24px',
+              height: '1px',
+              background: '#5a4f47',
+              transform: 'rotate(-45deg)',
+            }} />
+          </button>
+        </div>
+
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '56px',
+            padding: '40px 20px 56px',
+            overflowY: 'auto',
+          }}
+        >
+          {links.map(link => (
+            <a
+              key={link.label}
+              href={homeHref(link.section)}
+              onClick={() => setMenuOpen(false)}
+              style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                fontSize: '36px',
+                fontWeight: 300,
+                color: '#5a4f47',
+                textDecoration: 'none',
+                letterSpacing: '0.05em',
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+    </>
   )
 }
