@@ -386,6 +386,27 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/get-started"
+            onClick={() => setMenuOpen(false)}
+            style={{
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '11px',
+              fontWeight: 500,
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#fffaf5',
+              background: '#b07d62',
+              padding: '14px 28px',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '220px',
+            }}
+          >
+            Get Started
+          </a>
         </div>
       </div>
     )}
