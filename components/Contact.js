@@ -136,6 +136,7 @@ export default function Contact() {
           >
             {[
               { label: 'Email', value: 'studio@danxfoto.com' },
+              { label: 'Phone', value: '(617) 454-4419' },
               { label: 'Based in', value: 'Melrose, MA' },
               { label: 'Response time', value: 'Within 24 hours' },
             ].map(item => (

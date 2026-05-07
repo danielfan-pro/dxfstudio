@@ -490,6 +490,7 @@ export default function PhotographyPage() {
               ['Email', 'studio@danxfoto.com'],
               ['Phone', '(617) 454-4419'],
               ['Based In', 'Melrose, MA'],
+              ['Response Time', 'Within 24 hours'],
             ].map(([label, value]) => (
               <div key={label} style={{ display: 'contents' }}>
                 <span
