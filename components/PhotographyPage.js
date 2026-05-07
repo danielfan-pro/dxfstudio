@@ -221,7 +221,7 @@ export default function PhotographyPage() {
                 color: '#b07d62',
               }}
             >
-              Photography
+              Photography | Greater Boston & North Shore
             </span>
           </div>
           <h2
@@ -235,9 +235,9 @@ export default function PhotographyPage() {
               maxWidth: '860px',
             }}
           >
-            Family & Portrait Photography
+            Elevated now.
             <br />
-            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>for the moments you want to keep.</em>
+            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Timeless later.</em>
           </h2>
           <p
             style={{
@@ -247,10 +247,56 @@ export default function PhotographyPage() {
               color: '#6f635a',
               lineHeight: 1.8,
               width: '100%',
+              marginBottom: '32px',
             }}
           >
-            Images for families, and individuals. Elevated now. Timeless later.
+            Images for individuals, couples, and families.
           </p>
+          <div className="photo-hero-actions" style={{ display: 'flex', gap: '18px', flexWrap: 'wrap' }}>
+            <a
+              href="#photo-portfolio"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '220px',
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '11px',
+                fontWeight: 500,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: '#b07d62',
+                background: 'transparent',
+                border: '1px solid rgba(176,125,98,0.32)',
+                padding: '16px 28px',
+                textDecoration: 'none',
+              }}
+            >
+              View Portfolio
+            </a>
+            <button
+              type="button"
+              {...tallyPopupProps}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '220px',
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '11px',
+                fontWeight: 500,
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: '#fffaf5',
+                background: '#b07d62',
+                border: 'none',
+                padding: '16px 28px',
+                cursor: 'pointer',
+              }}
+            >
+              Book a Session
+            </button>
+          </div>
         </div>
       </section>
 
@@ -262,12 +308,31 @@ export default function PhotographyPage() {
               Portfolio
             </span>
           </div>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '28px' }}>
+            Driven by context.
+            <br />
+            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Caught in the moment.</em>
+          </h2>
           <PhotographyPortfolio items={portfolioItems} />
         </div>
       </section>
 
-      <section id="photo-about" style={{ padding: '88px 40px', background: '#faf7f2', scrollMarginTop: '140px' }}>
-        <div className="photo-about-inner" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(280px, 420px) minmax(0, 1fr)', gap: '56px', alignItems: 'center' }}>
+      <section id="photo-about" style={{ padding: '96px 40px 40px', background: '#faf7f2', scrollMarginTop: '140px' }}>
+        <div className="photo-about-inner" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(260px, 360px)', gap: '48px', alignItems: 'start' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '22px' }}>
+              <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
+              <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', letterSpacing: '0.26em', textTransform: 'uppercase', color: '#b07d62' }}>
+                About
+              </span>
+            </div>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '17px', fontWeight: 300, lineHeight: 1.9, color: '#6f635a', marginBottom: '20px' }}>
+              Hi, I&apos;m Dan. Based in Melrose, MA.
+            </p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '17px', fontWeight: 300, lineHeight: 1.9, color: '#6f635a', marginBottom: '32px' }}>
+              Some moments are guided, most are caught. All of them are real. I shoot families and portraits across the North Shore and Greater Boston.
+            </p>
+          </div>
           <div style={{ position: 'relative' }}>
             <div style={{ border: '1px solid rgba(176,125,98,0.28)', padding: '0' }}>
               <img
@@ -279,40 +344,6 @@ export default function PhotographyPage() {
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
-          </div>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '22px' }}>
-              <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
-              <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', letterSpacing: '0.26em', textTransform: 'uppercase', color: '#b07d62' }}>
-                About
-              </span>
-            </div>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '24px' }}>
-              Hi, I&apos;m Dan.
-            </h2>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '17px', fontWeight: 300, lineHeight: 1.9, color: '#6f635a', marginBottom: '20px' }}>
-              Based in Melrose, MA. Shooting families and portraits across Greater Boston.
-            </p>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '17px', fontWeight: 300, lineHeight: 1.9, color: '#6f635a', marginBottom: '32px' }}>
-              Some moments are guided. Most are caught. All of them are real.
-            </p>
-            <a
-              href="#photo-book-now"
-              style={{
-                display: 'inline-block',
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '11px',
-                fontWeight: 500,
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-                color: '#fffaf5',
-                background: '#b07d62',
-                padding: '14px 28px',
-                textDecoration: 'none',
-              }}
-            >
-              Work With Me
-            </a>
           </div>
         </div>
       </section>
@@ -416,13 +447,10 @@ export default function PhotographyPage() {
             </span>
           </div>
           <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '22px' }}>
-            Let&apos;s Create
+            Let&apos;s create something,
             <br />
-            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Something Beautiful</em>
+            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>together.</em>
           </h2>
-          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '17px', fontWeight: 300, lineHeight: 1.85, color: '#6f635a', width: '100%', marginBottom: '34px' }}>
-            Ready when you are.
-          </p>
           <div className="photo-book-actions" style={{ display: 'flex', gap: '18px', flexWrap: 'wrap', marginBottom: '28px' }}>
             <button
               type="button"
@@ -447,17 +475,44 @@ export default function PhotographyPage() {
               Start Session Inquiry
             </button>
           </div>
-          <div className="photo-contact-meta" style={{ display: 'flex', gap: '36px', flexWrap: 'wrap' }}>
+          <div
+            className="photo-contact-meta"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '160px minmax(0, 1fr)',
+              rowGap: '20px',
+              columnGap: '32px',
+              alignItems: 'baseline',
+              width: '100%',
+            }}
+          >
             {[
               ['Email', 'studio@danxfoto.com'],
               ['Phone', '(617) 454-4419'],
               ['Based In', 'Melrose, MA'],
             ].map(([label, value]) => (
-              <div key={label}>
-                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '11px', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#b07d62', marginBottom: '8px' }}>
+              <div key={label} style={{ display: 'contents' }}>
+                <span
+                  style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '11px',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    color: '#b07d62',
+                  }}
+                >
                   {label}
-                </div>
-                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', fontWeight: 300, color: '#5f534a' }}>{value}</div>
+                </span>
+                <span
+                  style={{
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '14px',
+                    fontWeight: 300,
+                    color: '#5a4f47',
+                  }}
+                >
+                  {value}
+                </span>
               </div>
             ))}
           </div>
@@ -526,6 +581,15 @@ export default function PhotographyPage() {
           }
           .photo-book-actions a {
             width: 100%;
+          }
+          .photo-hero-actions a,
+          .photo-hero-actions button {
+            width: 100%;
+          }
+          .photo-contact-meta {
+            grid-template-columns: 1fr !important;
+            row-gap: 10px !important;
+            column-gap: 0 !important;
           }
         }
       `}</style>
