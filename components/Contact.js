@@ -104,7 +104,7 @@ export default function Contact() {
               width: '100%',
             }}
           >
-            No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we&apos;re the right fit. If you&apos;re ready to share your project details, you can{' '}
+            Every project starts with a free conversation about what your business needs and whether we&apos;re the right fit. If you&apos;re ready to share your project details, you can{' '}
             <a
               href="https://danxfoto.com/get-started"
               className="contact-questionnaire-link"

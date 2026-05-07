@@ -47,7 +47,7 @@ const services = [
   {
     number: '06',
     title: 'Family & Portrait Photography',
-    description: 'Authentic, relaxed portrait sessions for families, couples, and individuals. Whether you need updated headshots or want to capture your family at this moment in time, we bring the same attention to light, composition, and detail that we bring to every brand shoot.',
+    description: 'Authentic, relaxed portrait sessions for families, couples, and individuals.',
     features: ['Family portrait sessions', 'Individual portrait sessions', 'Mini sessions'],
     badge: null,
     premium: true,

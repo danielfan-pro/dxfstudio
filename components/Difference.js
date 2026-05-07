@@ -23,7 +23,7 @@ const advantages = [
   {
     number: '04',
     title: 'Built-In Security',
-    diyCatch: 'Traditional databases that process requests in real-time are constant targets for malicious bots.',
+    diyCatch: 'Websites built on traditional platforms are common targets for hackers and automated attacks.',
     advantage: 'A modern database-free architecture that eliminates the primary entry points for hackers.',
   },
   {
