@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://studio.danxfoto.com'
+  const baseUrl = 'https://danxfoto.com'
 
   return [
     {

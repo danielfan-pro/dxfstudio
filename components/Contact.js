@@ -106,7 +106,7 @@ export default function Contact() {
           >
             No jargon, no pushy sales pitch. Just a straightforward conversation about what your business needs and whether we&apos;re the right fit. If you&apos;re ready to share your project details, you can{' '}
             <a
-              href="https://studio.danxfoto.com/get-started"
+              href="https://danxfoto.com/get-started"
               className="contact-questionnaire-link"
               style={{
                 color: '#b07d62',

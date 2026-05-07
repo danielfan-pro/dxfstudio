@@ -5,8 +5,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'DanXFoto',
-  url: 'https://studio.danxfoto.com',
-  image: 'https://studio.danxfoto.com/danxfoto-og.png',
+  url: 'https://danxfoto.com',
+  image: 'https://danxfoto.com/danxfoto-og.png',
   description:
     'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
   areaServed: [
@@ -34,7 +34,7 @@ const localBusinessSchema = {
 }
 
 export const metadata = {
-  metadataBase: new URL('https://studio.danxfoto.com'),
+  metadataBase: new URL('https://danxfoto.com'),
   title: {
     default: 'DanXFoto | Web Design & Photography',
     template: '%s | DanXFoto',
