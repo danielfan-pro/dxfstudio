@@ -247,7 +247,7 @@ export default function Services() {
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '36px' }}>
               {service.features.map(f => (
                 <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <span style={{ color: '#b07d62', flexShrink: 0, marginTop: '1px' }}>✓</span>
+                  <span style={{ color: '#b07d62', flexShrink: 0, marginTop: '1px' }}>—</span>
                   <span style={{
                     fontFamily: 'DM Sans, sans-serif', fontSize: '14px',
                     fontWeight: 300, color: '#5a4f47', opacity: 0.8,

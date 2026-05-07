@@ -36,12 +36,12 @@ const localBusinessSchema = {
 export const metadata = {
   metadataBase: new URL('https://studio.danxfoto.com'),
   title: {
-    default: 'DanXFoto - Web Design & Photography',
+    default: 'DanXFoto | Web Design & Photography',
     template: '%s | DanXFoto',
   },
   description: 'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
   openGraph: {
-    title: 'DanXFoto - Web Design & Photography',
+    title: 'DanXFoto | Web Design & Photography',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
     url: '/',
     siteName: 'DanXFoto',
@@ -58,7 +58,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DanXFoto - Web Design & Photography',
+    title: 'DanXFoto | Web Design & Photography',
     description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
     images: ['/danxfoto-og.png'],
   },

@@ -151,8 +151,54 @@ export default function PhotographyPage() {
   return (
     <main style={{ background: '#ffffff' }}>
       <section
+        id="photo-subnav-sticky"
         style={{
-          padding: '180px 40px 56px',
+          position: 'sticky',
+          top: '80px',
+          zIndex: 20,
+          background: 'rgba(255,255,255,0.94)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(176,125,98,0.1)',
+        }}
+      >
+        <div
+          className="photo-subnav"
+          style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            padding: '14px 40px',
+            display: 'flex',
+            gap: '24px',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+          }}
+        >
+          {quickLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="photo-subnav-link"
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '11px',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: '#7a6b61',
+                textDecoration: 'none',
+                paddingBottom: '2px',
+                borderBottom: '1px solid transparent',
+                transition: 'color 0.2s ease, border-color 0.2s ease',
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section
+        style={{
+          padding: '108px 40px 56px',
           borderBottom: '1px solid rgba(176,125,98,0.1)',
         }}
       >
@@ -205,52 +251,6 @@ export default function PhotographyPage() {
           >
             Images for families, and individuals. Elevated now. Timeless later.
           </p>
-        </div>
-      </section>
-
-      <section
-        id="photo-subnav-sticky"
-        style={{
-          position: 'sticky',
-          top: '80px',
-          zIndex: 20,
-          background: 'rgba(255,255,255,0.94)',
-          backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(176,125,98,0.1)',
-        }}
-      >
-        <div
-          className="photo-subnav"
-          style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '14px 40px',
-            display: 'flex',
-            gap: '24px',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
-          {quickLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="photo-subnav-link"
-              style={{
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: '11px',
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-                color: '#7a6b61',
-                textDecoration: 'none',
-                paddingBottom: '2px',
-                borderBottom: '1px solid transparent',
-                transition: 'color 0.2s ease, border-color 0.2s ease',
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
         </div>
       </section>
 

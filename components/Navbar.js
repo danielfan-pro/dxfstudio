@@ -61,6 +61,7 @@ export default function Navbar() {
 
   const homeHref = (section = '') => pathname === '/' ? `#${section}` : `/#${section}`
   const rootHref = pathname === '/' ? '#' : '/'
+  const showGetStarted = pathname !== '/photography'
   const links = [
     { label: 'Services', href: homeHref('services') },
     { label: 'Approach', href: homeHref('difference') },
@@ -166,25 +167,27 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/get-started"
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '11px',
-              fontWeight: 500,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#fffaf5',
-              background: '#b07d62',
-              padding: '10px 22px',
-              textDecoration: 'none',
-              transition: 'background 0.2s',
-            }}
-            onMouseEnter={e => e.target.style.background = '#c49070'}
-            onMouseLeave={e => e.target.style.background = '#b07d62'}
-          >
-            Get Started
-          </a>
+          {showGetStarted && (
+            <a
+              href="/get-started"
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '11px',
+                fontWeight: 500,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#fffaf5',
+                background: '#b07d62',
+                padding: '10px 22px',
+                textDecoration: 'none',
+                transition: 'background 0.2s',
+              }}
+              onMouseEnter={e => e.target.style.background = '#c49070'}
+              onMouseLeave={e => e.target.style.background = '#b07d62'}
+            >
+              Get Started
+            </a>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -410,27 +413,29 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="/get-started"
-            onClick={() => setMenuOpen(false)}
-            style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: '11px',
-              fontWeight: 500,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              color: '#fffaf5',
-              background: '#b07d62',
-              padding: '14px 28px',
-              textDecoration: 'none',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: '220px',
-            }}
-          >
-            Get Started
-          </a>
+          {showGetStarted && (
+            <a
+              href="/get-started"
+              onClick={() => setMenuOpen(false)}
+              style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '11px',
+                fontWeight: 500,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                color: '#fffaf5',
+                background: '#b07d62',
+                padding: '14px 28px',
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minWidth: '220px',
+              }}
+            >
+              Get Started
+            </a>
+          )}
         </div>
       </div>
     )}
