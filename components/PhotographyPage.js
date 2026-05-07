@@ -447,9 +447,9 @@ export default function PhotographyPage() {
             </span>
           </div>
           <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '22px' }}>
-            Let&apos;s create something,
+            Let&apos;s make something,
             <br />
-            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>together.</em>
+            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>worth remembering.</em>
           </h2>
           <div className="photo-book-actions" style={{ display: 'flex', gap: '18px', flexWrap: 'wrap', marginBottom: '28px' }}>
             <button
@@ -521,7 +521,6 @@ export default function PhotographyPage() {
             {[
               { href: 'https://www.instagram.com/danxfoto/', icon: '/instagram-logo.svg', label: 'Instagram' },
               { href: 'https://www.facebook.com/danxfoto/', icon: '/facebook-logo.svg', label: 'Facebook' },
-              { href: 'https://www.linkedin.com/company/danxfoto/', icon: '/linkedin-logo.svg', label: 'LinkedIn' },
             ].map((item) => (
               <a
                 key={item.label}
