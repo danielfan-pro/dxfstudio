@@ -185,7 +185,7 @@ export default function Navbar() {
               onMouseEnter={e => e.target.style.background = '#c49070'}
               onMouseLeave={e => e.target.style.background = '#b07d62'}
             >
-              Get Started
+              Web Project Inquiry
             </a>
           )}
         </div>
@@ -433,7 +433,7 @@ export default function Navbar() {
                 minWidth: '220px',
               }}
             >
-              Get Started
+              Web Project Inquiry
             </a>
           )}
         </div>

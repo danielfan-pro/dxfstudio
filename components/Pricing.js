@@ -21,7 +21,7 @@ const plans = [
       'Domain renewal included',
       'CMS — update your own content',
     ],
-    cta: 'Get Started',
+    cta: 'Web Project Inquiry',
   },
   {
     id: 'launch',
@@ -44,7 +44,7 @@ const plans = [
       '90-minute on-location brand photo shoot',
       '20 professionally edited high-resolution photos delivered in 2 weeks',
     ],
-    cta: 'Get Started',
+    cta: 'Web Project Inquiry',
   },
   {
     id: 'portfolio',
