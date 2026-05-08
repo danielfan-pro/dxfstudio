@@ -308,7 +308,7 @@ export default function PhotographyPage() {
               Portfolio
             </span>
           </div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '28px' }}>
+          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.02, color: '#2d2926', marginBottom: '28px' }}>
             Driven by context.
             <br />
             <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Caught in the moment.</em>
@@ -357,10 +357,10 @@ export default function PhotographyPage() {
                 Sessions
               </span>
             </div>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '20px' }}>
-              Moments worth keeping,
+            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.02, color: '#2d2926', marginBottom: '20px' }}>
+              Moments worth Keeping.
               <br />
-              <em style={{ color: '#b07d62', fontStyle: 'italic' }}>beautifully made.</em>
+              <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Beautifully made.</em>
             </h2>
           </div>
 
@@ -446,10 +446,10 @@ export default function PhotographyPage() {
               Book Now
             </span>
           </div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.1, color: '#2d2926', marginBottom: '22px' }}>
-            Let&apos;s make something,
+          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(38px, 5vw, 64px)', fontWeight: 300, lineHeight: 1.02, color: '#2d2926', marginBottom: '22px' }}>
+            Something made.
             <br />
-            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>worth remembering.</em>
+            <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Forever kept.</em>
           </h2>
           <div className="photo-book-actions" style={{ display: 'flex', gap: '18px', flexWrap: 'wrap', marginBottom: '28px' }}>
             <button
