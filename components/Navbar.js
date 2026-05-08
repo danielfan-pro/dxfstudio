@@ -256,6 +256,8 @@ export default function Navbar() {
           nav {
             padding-left: 20px !important;
             padding-right: 20px !important;
+            padding-top: 18px !important;
+            padding-bottom: 18px !important;
           }
           .nav-inner {
             gap: 12px !important;
