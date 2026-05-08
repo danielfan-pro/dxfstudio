@@ -8,7 +8,7 @@ const localBusinessSchema = {
   url: 'https://danxfoto.com',
   image: 'https://danxfoto.com/danxfoto-og.png',
   description:
-    'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+    'DanXFoto builds custom websites with premium brand and lifestyle photography in Melrose, serving Greater Boston and the North Shore. Fast, polished digital experiences.',
   areaServed: [
     {
       '@type': 'City',
@@ -39,10 +39,12 @@ export const metadata = {
     default: 'DanXFoto | Web Design & Photography',
     template: '%s | DanXFoto',
   },
-  description: 'DanXFoto builds custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+  description:
+    'DanXFoto builds custom websites with premium brand and lifestyle photography in Melrose, serving Greater Boston and the North Shore. Fast, polished digital experiences.',
   openGraph: {
     title: 'DanXFoto | Web Design & Photography',
-    description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+    description:
+      'DanXFoto builds custom websites with premium brand and lifestyle photography in Melrose, serving Greater Boston and the North Shore. Fast, polished digital experiences.',
     url: '/',
     siteName: 'DanXFoto',
     locale: 'en_US',
@@ -59,7 +61,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'DanXFoto | Web Design & Photography',
-    description: 'Custom websites and premium in-house photography for businesses that need a fast, credible digital presence.',
+    description:
+      'DanXFoto builds custom websites with premium brand and lifestyle photography in Melrose, serving Greater Boston and the North Shore. Fast, polished digital experiences.',
     images: ['/danxfoto-og.png'],
   },
   icons: {
