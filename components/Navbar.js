@@ -273,6 +273,15 @@ export default function Navbar() {
             letter-spacing: 0.06em !important;
             white-space: nowrap !important;
           }
+          .mobile-menu-content {
+            gap: 28px !important;
+            padding-top: 24px !important;
+            padding-bottom: 28px !important;
+          }
+          .mobile-menu-link {
+            padding: 2px 10px !important;
+            line-height: 1.05 !important;
+          }
         }
         .brand-link {
           -webkit-tap-highlight-color: transparent;
@@ -384,14 +393,15 @@ export default function Navbar() {
         </div>
 
         <div
+          className="mobile-menu-content"
           style={{
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'center',
-            gap: '56px',
-            padding: '40px 20px 56px',
+            justifyContent: 'flex-start',
+            gap: '36px',
+            padding: '32px 20px 40px',
             overflowY: 'auto',
           }}
         >

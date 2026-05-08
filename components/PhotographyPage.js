@@ -570,7 +570,7 @@ export default function PhotographyPage() {
         }
         @media (max-width: 767px) {
           #photo-subnav-sticky {
-            top: 74px !important;
+            top: 72px !important;
           }
           .photo-subnav {
             justify-content: flex-start !important;
