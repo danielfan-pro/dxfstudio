@@ -86,7 +86,7 @@ export default function Contact() {
               width: '100%',
             }}
           >
-            Let&apos;s Build Something <em style={{ color: '#b07d62' }}>Great Together</em>
+            A better digital presence <em style={{ color: '#b07d62' }}>starts here.</em>
           </h2>
 
           <p
