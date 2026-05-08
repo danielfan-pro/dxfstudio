@@ -224,7 +224,7 @@ export default function PhotographyPage() {
               Photography | Greater Boston & North Shore
             </span>
           </div>
-          <h2
+          <h1
             style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(32px, 4.2vw, 60px)',
@@ -238,7 +238,7 @@ export default function PhotographyPage() {
             Elevated now.
             <br />
             <em style={{ color: '#b07d62', fontStyle: 'italic' }}>Timeless later.</em>
-          </h2>
+          </h1>
           <p
             style={{
               fontFamily: 'DM Sans, sans-serif',

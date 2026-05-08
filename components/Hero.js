@@ -53,7 +53,7 @@ export default function Hero() {
           Web + Photography, All In-House
         </div>
 
-        <h2
+        <h1
           className="reveal"
           style={{
             fontFamily: 'Cormorant Garamond, serif',
@@ -69,24 +69,7 @@ export default function Hero() {
           Your Business<br />
           Deserves More<br />
           <span style={{ color: '#b07d62' }}>Than Social Media.</span>
-        </h2>
-
-        <h2
-          className="reveal"
-          style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(32px, 4.2vw, 60px)',
-            fontWeight: 300,
-            lineHeight: 1.02,
-            letterSpacing: '-0.02em',
-            color: '#2d2926',
-            marginBottom: '28px',
-            width: '100%',
-            display: 'none',
-          }}
-        >
-          We Build the Digital Engines <span style={{ color: '#b07d62' }}>That Keep Them.</span>
-        </h2>
+        </h1>
 
         <div
           className="reveal"
