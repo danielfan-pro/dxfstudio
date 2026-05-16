@@ -35,6 +35,9 @@ const localBusinessSchema = {
 
 export const metadata = {
   metadataBase: new URL('https://danxfoto.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: 'DanXFoto | Web Design & Photography',
     template: '%s | DanXFoto',

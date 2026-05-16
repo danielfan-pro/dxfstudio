@@ -7,6 +7,9 @@ export const metadata = {
   title: {
     absolute: 'DanXFoto | Family & Portrait Photography',
   },
+  alternates: {
+    canonical: '/photography',
+  },
   description:
     'Family and portrait photography by DanXFoto in Melrose, Boston, and the Greater Boston Area, with relaxed sessions and timeless finished images.',
   openGraph: {
