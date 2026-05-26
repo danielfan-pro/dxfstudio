@@ -333,7 +333,7 @@ export default function PhotographyPage() {
               Some moments are guided, most are caught. All of them are real. I shoot families and portraits across the North Shore and Greater Boston.
             </p>
           </div>
-          <div style={{ position: 'relative', justifySelf: 'end', width: '100%', maxWidth: '280px' }}>
+          <div className="photo-about-portrait" style={{ position: 'relative', justifySelf: 'end', width: '100%', maxWidth: '280px' }}>
             <div style={{ border: '1px solid rgba(176,125,98,0.28)', padding: '0' }}>
               <img
                 src="/photography/dan-about-2026.jpg"
@@ -566,6 +566,10 @@ export default function PhotographyPage() {
           .photo-about-inner,
           .photo-services-grid {
             grid-template-columns: 1fr !important;
+          }
+          .photo-about-portrait {
+            justify-self: center !important;
+            margin: 0 auto;
           }
         }
         @media (max-width: 767px) {
