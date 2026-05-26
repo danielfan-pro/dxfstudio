@@ -318,7 +318,7 @@ export default function PhotographyPage() {
       </section>
 
       <section id="photo-about" style={{ padding: '96px 40px 40px', background: '#faf7f2', scrollMarginTop: '140px' }}>
-        <div className="photo-about-inner" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(260px, 360px)', gap: '48px', alignItems: 'start' }}>
+        <div className="photo-about-inner" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(220px, 280px)', gap: '48px', alignItems: 'start' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '22px' }}>
               <div style={{ width: '40px', height: '1px', background: '#b07d62' }} />
@@ -333,13 +333,13 @@ export default function PhotographyPage() {
               Some moments are guided, most are caught. All of them are real. I shoot families and portraits across the North Shore and Greater Boston.
             </p>
           </div>
-          <div style={{ position: 'relative' }}>
+          <div style={{ position: 'relative', justifySelf: 'end', width: '100%', maxWidth: '280px' }}>
             <div style={{ border: '1px solid rgba(176,125,98,0.28)', padding: '0' }}>
               <img
-                src="/photography/dan-boston-family-portrait-photographer-1200.jpg"
+                src="/photography/dan-about-2026.jpg"
                 alt="DanXFoto portrait photographer Dan"
-                width="1200"
-                height="1238"
+                width="4373"
+                height="6560"
                 loading="lazy"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
