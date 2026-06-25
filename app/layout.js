@@ -31,6 +31,11 @@ const localBusinessSchema = {
   },
   email: 'studio@danxfoto.com',
   serviceType: ['Web design', 'Brand photography', 'iOS app development'],
+  sameAs: [
+    'https://g.page/r/CRg17tXuvdLVEBE/',
+    'https://www.instagram.com/danxfoto/',
+    'https://www.facebook.com/danxfoto/',
+  ],
 }
 
 export const metadata = {
